@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Domain.Contact>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Person.FirstLastname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactType.ContactTypeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactValue)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Person.FirstLastname)
+        </td>
+        <td>
+            @item.ContactType.ContactTypeName.Translate()
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactValue)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ContactId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ContactId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ContactId })
+        </td>
+    </tr>
+}
+
+</table>
