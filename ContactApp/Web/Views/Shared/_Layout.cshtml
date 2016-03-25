@@ -1,4 +1,5 @@
-﻿@{
+﻿@using System.Threading
+@{
     var titleTag = (string.IsNullOrWhiteSpace(ViewBag.Title) ? "" : ViewBag.Title + " - ") + Resources.Common.ApplicationName;
 }
 <!DOCTYPE html>
@@ -74,16 +75,63 @@
                 {
                     <text>(@Html.ActionLink(@Resources.Common.Login, "Login", new { area = "", controller = "Account" }, htmlAttributes: new { id = "loginLink" }) | @Html.ActionLink(@Resources.Common.Register, "Register", new { area = "", controller = "Account" }, htmlAttributes: new { id = "registerLink" }))</text>
                 }
+                (Culture:<b>@Culture</b> UICulture:<b>@UICulture</b>)
             </p>
         </footer>
     </div>
 
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/cldr")
+    @Scripts.Render("~/bundles/globalize")
     @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/moment")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/Scripts/tinymce/tinymce.min.js")
     @Scripts.Render("~/bundles/app")
 
     @RenderSection("scripts", required: false)
+    @{
+        var currentCultureCode = "";
+        switch (Thread.CurrentThread.CurrentCulture.ToString())
+        {
+            case "et-EE":
+                currentCultureCode = "et";
+                break;
+            case "en-US":
+                currentCultureCode = "en";
+                break;
+            case "en-GB":
+                break;
+            default:
+                currentCultureCode = "root";
+                break;
+        }
+
+    }
+    <script type="text/javascript">
+        $.when(
+            $.get("/bower_components/cldr-data/supplemental/likelySubtags.json"),
+            $.get("/bower_components/cldr-data/main/@currentCultureCode/numbers.json"),
+            $.get("/bower_components/cldr-data/supplemental/numberingSystems.json"),
+            $.get("/bower_components/cldr-data/main/@currentCultureCode/ca-gregorian.json"),
+            $.get("/bower_components/cldr-data/main/@currentCultureCode/timeZoneNames.json"),
+            $.get("/bower_components/cldr-data/supplemental/timeData.json"),
+            $.get("/bower_components/cldr-data/supplemental/weekData.json")
+        ).then(function () {
+            // Normalize $.get results, we only need the JSON, not the request statuses.
+            return [].slice.apply(arguments, [0]).map(function (result) {
+                return result[0];
+            });
+        }).then(Globalize.load).then(function () {
+            // Initialise Globalize to the current UI culture
+            Globalize.locale('@Thread.CurrentThread.CurrentCulture');
+        });
+
+        $(function () {
+            $('[type="datetime"]').datetimepicker({ locale: '@Thread.CurrentThread.CurrentCulture' });
+            $('[type="date"]').datetimepicker({ locale: '@Thread.CurrentThread.CurrentCulture', format: 'L' }).attr('type', 'text');
+            $('[type="time"]').datetimepicker({ locale: '@Thread.CurrentThread.CurrentCulture', format: 'LT' }).attr('type', 'text');
+        });
+    </script>
 </body>
 </html>

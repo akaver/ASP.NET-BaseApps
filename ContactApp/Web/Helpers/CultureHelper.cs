@@ -306,7 +306,7 @@ namespace Web.Helpers
             new CultureCombo()
             {
                 UICulture = "en",
-                Culture = "en-GB"
+                Culture = "en-US"
             },
             new CultureCombo()
             {

@@ -1,9 +1,11 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure.Interception;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Data.Entity.Validation;
 using System.Diagnostics;
+using System.Linq;
 using DataAnnotations;
 using DAL.EFConfiguration;
 using DAL.Helpers;
@@ -24,7 +26,7 @@ namespace DAL
         public DataBaseContext(ILogger logger)
             : base("name=DataBaseConnectionStr")
         {
-            _logger = logger; 
+            _logger = logger;
             _logger.Debug("InstanceId: " + _instanceId);
 
             //Database.SetInitializer(new MigrateDatabaseToLatestVersion<DataBaseContext,Migrations.Configuration>());
@@ -35,7 +37,7 @@ namespace DAL
 #if DEBUG
             this.Database.Log = s => Trace.Write(s);
 #endif
-            this.Database.Log = s => _logger.Info((s.Contains("SELECT") || s.Contains("UPDATE") || s.Contains("DELETE") || s.Contains("INSERT")) ? "\n"+s.Trim() : s.Trim());
+            this.Database.Log = s => _logger.Info((s.Contains("SELECT") || s.Contains("UPDATE") || s.Contains("DELETE") || s.Contains("INSERT")) ? "\n" + s.Trim() : s.Trim());
 
             //DbInterception.Add(new NLogCommandInterceptor(_logger));
 
@@ -98,9 +100,17 @@ namespace DAL
 
             Precision.ConfigureModelBuilder(modelBuilder);
 
-            // convert all datetime and datetime? properties to datetime2 in sql
-            // sql datetime has min value of 1753-01-01 00:00:00.000
+            // convert all datetime and datetime? properties to datetime2 in ms sql
+            // ms sql datetime has min value of 1753-01-01 00:00:00.000
             modelBuilder.Properties<DateTime>().Configure(c => c.HasColumnType("datetime2"));
+
+            // use Date type in ms sql, where [DataType(DataType.Date)] attribute is used
+            modelBuilder.Properties<DateTime>()
+           .Where(x => x.GetCustomAttributes(false).OfType<DataTypeAttribute>()
+           .Any(a => a.DataType == DataType.Date))
+           .Configure(c => c.HasColumnType("date"));
+
+
         }
 
         public override int SaveChanges()

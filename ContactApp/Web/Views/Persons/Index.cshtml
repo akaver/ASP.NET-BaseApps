@@ -17,6 +17,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Lastname)
         </th>
+        <th>@Html.DisplayNameFor(model => model.DateTime)</th>
+        <th>@Html.DisplayNameFor(model => model.Date)</th>
+        <th>@Html.DisplayNameFor(model => model.Time)</th>
         <th>@Html.DisplayNameFor(model => model.Contacts)</th>
         <th></th>
     </tr>
@@ -29,6 +32,15 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Lastname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time)
             </td>
             <td>
                 @item.Contacts.Count
