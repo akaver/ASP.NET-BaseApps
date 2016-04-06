@@ -1255,6 +1255,7 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="Scripts\App\app.js" />
     <Content Include="Scripts\App\ganalytics.js" />
     <Content Include="Scripts\App\jquery.validate.fixdata.js" />
     <Content Include="Scripts\App\jquery.validate.globalize.datetime.js" />

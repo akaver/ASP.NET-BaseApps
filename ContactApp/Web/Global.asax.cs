@@ -26,12 +26,12 @@ namespace Web
         {
             // modify datetime.tostring formating in estonian locale (remove seconds)
             // default format is: ShortDatePattern + ' ' + LongTimePattern
-            if (CultureInfo.CurrentCulture.Name.StartsWith("et"))
-            {
-                var culture = (CultureInfo)CultureInfo.CurrentCulture.Clone();
-                culture.DateTimeFormat.LongTimePattern = "HH:mm";
-                Thread.CurrentThread.CurrentCulture = culture;
-            }
+            //if (CultureInfo.CurrentCulture.Name.StartsWith("et"))
+            //{
+            //    var culture = (CultureInfo)CultureInfo.CurrentCulture.Clone();
+            //    culture.DateTimeFormat.LongTimePattern = "HH:mm";
+            //    Thread.CurrentThread.CurrentCulture = culture;
+            //}
         }
     }
 }

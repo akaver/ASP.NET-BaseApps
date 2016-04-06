@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading;
 using System.Web;
@@ -52,6 +53,13 @@ namespace Web.Controllers
                 new System.Globalization.CultureInfo(
                     CultureHelper.GetCultureForUICulture(Thread.CurrentThread.CurrentUICulture));
 
+
+            // modify datetime.tostring formating in estonian locale (remove seconds)
+            // default format is: ShortDatePattern + ' ' + LongTimePattern
+            if (Thread.CurrentThread.CurrentCulture.Name.StartsWith("et"))
+            {
+                Thread.CurrentThread.CurrentCulture.DateTimeFormat.LongTimePattern = "HH:mm";
+            }
 
             return base.BeginExecuteCore(callback, state);
         }
