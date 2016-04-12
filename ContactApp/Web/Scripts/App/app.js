@@ -21,10 +21,6 @@ $.when(
 });
 
 $(function () {
-    // fix specific locale problems in moment.js
-    // moment is not using cldr data yet
-    moment.localeData("et")._longDateFormat.LT = "HH:mm";
-
     // attach bootstrap datetimepicker spinner
     $('input[data-val-datetime]').datetimepicker({ locale: currentCultureCode, format: 'L LT' });
     $('input[data-val-date]').datetimepicker({ locale: currentCultureCode, format: 'L' });

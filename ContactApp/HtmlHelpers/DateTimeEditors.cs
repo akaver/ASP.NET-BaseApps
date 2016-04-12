@@ -182,8 +182,7 @@ namespace HtmlHelpers
 
                 if (req != null)
                 {
-                    var a = (string) req.ErrorMessageResourceType?.GetProperty(req.ErrorMessageResourceName)?.GetMethod.Invoke(null,null);
-                    retVal = a;
+                    retVal = (string) req.ErrorMessageResourceType?.GetProperty(req.ErrorMessageResourceName)?.GetMethod.Invoke(null,null);
                 }
                 
             }
