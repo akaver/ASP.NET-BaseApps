@@ -26,14 +26,14 @@ $(function () {
     moment.localeData("et")._longDateFormat.LT = "HH:mm";
 
     // attach bootstrap datetimepicker spinner
-    $('[data-type="datetime"]').datetimepicker({ locale: currentCultureCode, format: 'L LT' });
-    $('[data-type="date"]').datetimepicker({ locale: currentCultureCode, format: 'L' });
-    $('[data-type="time"]').datetimepicker({ locale: currentCultureCode, format: 'LT' });
+    $('input[data-val-datetime]').datetimepicker({ locale: currentCultureCode, format: 'L LT' });
+    $('input[data-val-date]').datetimepicker({ locale: currentCultureCode, format: 'L' });
+    $('input[data-val-time]').datetimepicker({ locale: currentCultureCode, format: 'LT' });
 
     //add placeholders, use moment.js formats - since datetimepicker uses it
-    $('[data-type="datetime"]').attr('placeholder',
+    $('input[data-val-datetime]').attr('placeholder',
         moment.localeData(currentCultureCode)._longDateFormat.L + " " +
         moment.localeData(currentCultureCode)._longDateFormat.LT);
-    $('[data-type="date"]').attr('placeholder', moment.localeData(currentCultureCode)._longDateFormat.L);
-    $('[data-type="time"]').attr('placeholder', moment.localeData(currentCultureCode)._longDateFormat.LT);
+    $('input[data-val-date]').attr('placeholder', moment.localeData(currentCultureCode)._longDateFormat.L);
+    $('input[data-val-time]').attr('placeholder', moment.localeData(currentCultureCode)._longDateFormat.LT);
 });
