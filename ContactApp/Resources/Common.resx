@@ -147,4 +147,22 @@
   <data name="Submit" xml:space="preserve">
     <value>Submit</value>
   </data>
+  <data name="FieldIsRequired" xml:space="preserve">
+    <value>The {0} field is required.</value>
+  </data>
+  <data name="FieldMaxLength" xml:space="preserve">
+    <value>The field {0} must be a string or array type with a maximum length of &amp;#39;{1}&amp;#39;.</value>
+  </data>
+  <data name="FieldMinLength" xml:space="preserve">
+    <value>The field {0} must be a string or array type with a minimum length of &amp;#39;{1}&amp;#39;.</value>
+  </data>
+  <data name="FieldMustBeDataTypeDate" xml:space="preserve">
+    <value>The field {0} must be a date.</value>
+  </data>
+  <data name="FieldMustBeDataTypeDateTime" xml:space="preserve">
+    <value>The field {0} must be a datetime.</value>
+  </data>
+  <data name="FieldMustBeDataTypeTime" xml:space="preserve">
+    <value>The field {0} must be a time.</value>
+  </data>
 </root>

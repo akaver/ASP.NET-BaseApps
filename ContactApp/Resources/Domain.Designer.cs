@@ -158,5 +158,32 @@ namespace Resources {
                 return ResourceManager.GetString("LastnameLengthError", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date.
+        /// </summary>
+        public static string Person_Date2 {
+            get {
+                return ResourceManager.GetString("Person_Date2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date and Time.
+        /// </summary>
+        public static string Person_DateTime2 {
+            get {
+                return ResourceManager.GetString("Person_DateTime2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time.
+        /// </summary>
+        public static string Person_Time2 {
+            get {
+                return ResourceManager.GetString("Person_Time2", resourceCulture);
+            }
+        }
     }
 }

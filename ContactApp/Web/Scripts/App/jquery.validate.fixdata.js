@@ -1,5 +1,6 @@
 ﻿$(function () {
-    // replace html5 datetime, date and time types on inputs - this disables builtin html5 editors in browsers
+/*
+    // replace html5 datetime, date and time types on inputs (created by Html.EditorFor()) - this disables builtin html5 editors in browsers
     // add data-type attribute instead
     $('input[type="datetime"]').attr('type', 'text').attr('data-type', 'datetime');
     $('input[type="date"]').attr('type', 'text').attr('data-type', 'date');
@@ -24,4 +25,5 @@
     // fix up attributes for time
     // TODO: translations
     $('input[data-type="time"]').attr('data-val-time', 'Field has to be of type time.');
+*/
 });

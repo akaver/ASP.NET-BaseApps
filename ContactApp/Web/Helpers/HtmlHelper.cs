@@ -5,6 +5,7 @@ using System.Linq.Expressions;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Html;
+using System.Web.Routing;
 
 namespace Web.Helpers
 {
@@ -30,5 +31,24 @@ namespace Web.Helpers
             var result = html.DisplayNameFor(expression).ToString();
             return new MvcHtmlString(html.Raw(System.Web.HttpUtility.HtmlDecode(result)).ToString());
         }
+
+
+        //public static MvcHtmlString DateTimeEditorFor<TModel, TValue>(
+        //    this HtmlHelper<TModel> html,
+        //    Expression<Func<TModel, TValue>> expression, object additionalViewData
+        //    )
+        //{
+        //    var name = ExpressionHelper.GetExpressionText(expression);
+        //    var fullHtmlFieldName = html.ViewContext.ViewData.TemplateInfo.GetFullHtmlFieldName(name);
+
+        //    var tagBuilder = new TagBuilder("input");
+
+        //    tagBuilder.MergeAttribute("name", fullHtmlFieldName);
+        //    //tagBuilder.MergeAttributes(new RouteValueDictionary(additionalViewData?.htmlAttributes));
+
+
+        //    return MvcHtmlString.Create(tagBuilder.ToString(TagRenderMode.Normal));
+        //}
+
     }
 }

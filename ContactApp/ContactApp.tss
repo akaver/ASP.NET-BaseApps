@@ -8,23 +8,22 @@
       <string>c:\!dev\git\asp.net-baseapps\contactapp\web\global.asax.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Scripts\App\jquery.validate.globalize.datetime.js</string>
+      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\scripts\app\jquery.validate.globalize.datetime.js</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Domain\ContactType.cs</string>
+      <string>c:\!dev\git\asp.net-baseapps\contactapp\domain\contacttype.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Domain\MultiLangString.cs</string>
+      <string>c:\!dev\git\asp.net-baseapps\contactapp\domain\multilangstring.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Domain\Translation.cs</string>
+      <string>c:\!dev\git\asp.net-baseapps\contactapp\domain\translation.cs</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Web.config</string>
-      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Web.Debug.config</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\App_Start\BundleConfig.cs</string>
+      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\app_start\bundleconfig.cs</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\!dev\git\ASP.NET-BaseApps\.gitignore</string>

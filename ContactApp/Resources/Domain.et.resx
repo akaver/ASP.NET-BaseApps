@@ -141,4 +141,13 @@
   <data name="LastnameLengthError" xml:space="preserve">
     <value>Perekonnanimi on liiga pikk.</value>
   </data>
+  <data name="Person_Date2" xml:space="preserve">
+    <value>Kuupäev</value>
+  </data>
+  <data name="Person_DateTime2" xml:space="preserve">
+    <value>Kuupäev ja kellaaeg</value>
+  </data>
+  <data name="Person_Time2" xml:space="preserve">
+    <value>Kellaaeg</value>
+  </data>
 </root>

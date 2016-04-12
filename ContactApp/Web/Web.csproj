@@ -2237,6 +2237,10 @@
       <Project>{54e9dc6c-c740-4878-b57e-546c09b4e8ca}</Project>
       <Name>Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\HtmlHelpers\HtmlHelpers.csproj">
+      <Project>{aa310729-e203-4e3e-8e27-9399868d64d9}</Project>
+      <Name>HtmlHelpers</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Identity\Identity.csproj">
       <Project>{5b0755b3-5cf6-4cfb-b328-e152c98e6e22}</Project>
       <Name>Identity</Name>

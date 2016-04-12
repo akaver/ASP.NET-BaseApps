@@ -13,15 +13,15 @@ namespace Domain
     {
         public int PersonId { get; set; }
 
-        [Required]
-        [MaxLength(128, ErrorMessageResourceName = "FirstnameLengthError", ErrorMessageResourceType = typeof(Resources.Domain))]
-        [MinLength(1, ErrorMessageResourceName = "FirstnameLengthError", ErrorMessageResourceType = typeof(Resources.Domain))]
+        [Required(ErrorMessageResourceName = "FieldIsRequired", ErrorMessageResourceType = typeof(Resources.Common))]
+        [MinLength(2, ErrorMessageResourceName = "FieldMinLength", ErrorMessageResourceType = typeof(Resources.Common))]
+        [MaxLength(5, ErrorMessageResourceName = "FieldMaxLength", ErrorMessageResourceType = typeof(Resources.Common))]
         [Display(Name = nameof(Resources.Domain.Firstname), ResourceType = typeof(Resources.Domain))]
         public string Firstname { get; set; }
 
-        [Required]
-        [MaxLength(128, ErrorMessageResourceName = "LastnameLengthError", ErrorMessageResourceType = typeof(Resources.Domain))]
-        [MinLength(1, ErrorMessageResourceName = "LastnameLengthError", ErrorMessageResourceType = typeof(Resources.Domain))]
+        [Required(ErrorMessageResourceName = "FieldIsRequired", ErrorMessageResourceType = typeof(Resources.Common))]
+        [MinLength(2, ErrorMessageResourceName = "FieldMinLength", ErrorMessageResourceType = typeof(Resources.Common))]
+        [MaxLength(5, ErrorMessageResourceName = "FieldMaxLength", ErrorMessageResourceType = typeof(Resources.Common))]
         [Display(Name = nameof(Resources.Domain.Lastname), ResourceType = typeof(Resources.Domain))]
         public string Lastname { get; set; }
 
@@ -31,6 +31,8 @@ namespace Domain
         // https://msdn.microsoft.com/en-us/library/ms186724.aspx#DateandTimeDataTypes
         // look also into DBContext, SQL is forced to use certain fieldtypes according to this attribute
         // this is only tested against MS SQL / LocalDb
+        // in views, use custom htmlhelpers - Html.DateTimeEditorFor, DateEditorFor, TimeEditorFor
+
         [DataType(DataType.DateTime)]
         public DateTime DateTime { get; set; }
 
@@ -39,6 +41,23 @@ namespace Domain
 
         [DataType(DataType.Time)]
         public DateTime Time { get; set; }
+
+
+        [Display(Name = nameof(Resources.Domain.Person_DateTime2), ResourceType = typeof(Resources.Domain))]
+        [DataType(DataType.DateTime, ErrorMessageResourceName = "FieldMustBeDataTypeDateTime", ErrorMessageResourceType = typeof(Resources.Common))]
+        [Required(ErrorMessageResourceName = "FieldIsRequired", ErrorMessageResourceType = typeof(Resources.Common))]
+        public DateTime DateTime2 { get; set; }
+
+        [Display(Name = nameof(Resources.Domain.Person_Date2), ResourceType = typeof(Resources.Domain))]
+        [DataType(DataType.Date, ErrorMessageResourceName = "FieldMustBeDataTypeDate", ErrorMessageResourceType = typeof(Resources.Common))]
+        [Required(ErrorMessageResourceName = "FieldIsRequired", ErrorMessageResourceType = typeof(Resources.Common))]
+        public DateTime Date2 { get; set; }
+
+        [Display(Name = nameof(Resources.Domain.Person_Time2), ResourceType = typeof(Resources.Domain))]
+        //[DataType(DataType.Time, ErrorMessageResourceName = "FieldMustBeDataTypeTime", ErrorMessageResourceType = typeof(Resources.Common), ErrorMessage = null)]
+        [DataType(DataType.Time)]
+        [Required(ErrorMessageResourceName = "FieldIsRequired", ErrorMessageResourceType = typeof(Resources.Common))]
+        public DateTime Time2 { get; set; }
 
 
         [ForeignKey(nameof(User))]

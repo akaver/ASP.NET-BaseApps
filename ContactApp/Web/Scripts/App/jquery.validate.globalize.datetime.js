@@ -32,6 +32,7 @@
 
         for (var i = 0; i < $.validator.methods.dateGlobalizeOptions.dateParseFormat.length; i++) {
             val = Globalize.parseDate(value, $.validator.methods.dateGlobalizeOptions.dateParseFormat[i]);
+            console.log($.validator.methods.dateGlobalizeOptions.dateParseFormat[i], val, Globalize.dateFormatter($.validator.methods.dateGlobalizeOptions.dateParseFormat[i])(new Date(2016, 1, 1, 0, 0, 0)));
             res = res || (val instanceof Date);
             if (res === true) return res;
         }
@@ -50,6 +51,7 @@
 
         for (var i = 0; i < $.validator.methods.timeGlobalizeOptions.dateParseFormat.length; i++) {
             val = Globalize.parseDate(value, $.validator.methods.timeGlobalizeOptions.dateParseFormat[i]);
+            console.log($.validator.methods.timeGlobalizeOptions.dateParseFormat[i], val, Globalize.dateFormatter($.validator.methods.timeGlobalizeOptions.dateParseFormat[i])(new Date(2016, 1, 1, 0, 0, 0)));
             res = res || (val instanceof Date);
             if (res === true) return res;
         }

@@ -79,6 +79,60 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The {0} field is required..
+        /// </summary>
+        public static string FieldIsRequired {
+            get {
+                return ResourceManager.GetString("FieldIsRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field {0} must be a string or array type with a maximum length of &amp;#39;{1}&amp;#39;..
+        /// </summary>
+        public static string FieldMaxLength {
+            get {
+                return ResourceManager.GetString("FieldMaxLength", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field {0} must be a string or array type with a minimum length of &amp;#39;{1}&amp;#39;..
+        /// </summary>
+        public static string FieldMinLength {
+            get {
+                return ResourceManager.GetString("FieldMinLength", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field {0} must be a date..
+        /// </summary>
+        public static string FieldMustBeDataTypeDate {
+            get {
+                return ResourceManager.GetString("FieldMustBeDataTypeDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field {0} must be a datetime..
+        /// </summary>
+        public static string FieldMustBeDataTypeDateTime {
+            get {
+                return ResourceManager.GetString("FieldMustBeDataTypeDateTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The field {0} must be a time..
+        /// </summary>
+        public static string FieldMustBeDataTypeTime {
+            get {
+                return ResourceManager.GetString("FieldMustBeDataTypeTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Login.
         /// </summary>
         public static string Login {
