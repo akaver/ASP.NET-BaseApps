@@ -3,20 +3,32 @@ using System.Net;
 using System.Web.Mvc;
 using DAL.Interfaces;
 using Domain.Identity;
+using Microsoft.Owin.Security;
+using NLog;
 
 namespace Web.Areas.Admin.Controllers
 {
     [Authorize(Roles = "Admin")]
     public class UserClaimsController : Controller
     {
-        private readonly NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
+        private readonly NLog.ILogger _logger;
         private readonly string _instanceId = Guid.NewGuid().ToString();
         private readonly IUOW _uow;
 
-        public UserClaimsController(IUOW uow)
+        private readonly ApplicationRoleManager _roleManager;
+        private readonly ApplicationSignInManager _signInManager;
+        private readonly ApplicationUserManager _userManager;
+        private readonly IAuthenticationManager _authenticationManager;
+        public UserClaimsController(IUOW uow, ILogger logger, ApplicationRoleManager roleManager, ApplicationSignInManager signInManager, ApplicationUserManager userManager, IAuthenticationManager authenticationManager)
         {
-            _logger.Debug("InstanceId: " + _instanceId);
             _uow = uow;
+            _logger = logger;
+            _roleManager = roleManager;
+            _signInManager = signInManager;
+            _userManager = userManager;
+            _authenticationManager = authenticationManager;
+
+            _logger.Debug("InstanceId: " + _instanceId);
         }
 
         // GET: UserClaims

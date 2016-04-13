@@ -9,6 +9,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using DAL.Interfaces;
+using NLog;
 
 namespace DAL.Repositories
 {
@@ -16,7 +17,7 @@ namespace DAL.Repositories
     // covers all basic crud methods, common for all other repos
     public class EFRepository<T> : IEFRepository<T> where T : class
     {
-        private readonly NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
+        private readonly NLog.ILogger _logger = NLog.LogManager.GetCurrentClassLogger();
         private readonly string _instanceId = Guid.NewGuid().ToString();
 
         // the context and the dbset we are working with
@@ -26,6 +27,7 @@ namespace DAL.Repositories
         //Constructor, requires dbContext as dependency
         public EFRepository(IDbContext dbContext)
         {
+ 
             if (dbContext == null)
                 throw new ArgumentNullException(nameof(dbContext));
 

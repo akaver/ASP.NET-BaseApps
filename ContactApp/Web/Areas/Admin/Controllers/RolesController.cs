@@ -6,13 +6,14 @@ using DAL.Interfaces;
 using Domain.Identity;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
+using NLog;
 
 namespace Web.Areas.Admin.Controllers
 {
     [Authorize(Roles = "Admin")]
     public class RolesController : Controller
     {
-        private readonly NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
+        private readonly NLog.ILogger _logger;
         private readonly string _instanceId = Guid.NewGuid().ToString();
 
         private readonly IUOW _uow;
@@ -22,14 +23,16 @@ namespace Web.Areas.Admin.Controllers
         private readonly IAuthenticationManager _authenticationManager;
 
         public RolesController(IUOW uow, ApplicationRoleManager roleManager, ApplicationUserManager userManager,
-            ApplicationSignInManager signInManager, IAuthenticationManager authenticationManager)
+            ApplicationSignInManager signInManager, IAuthenticationManager authenticationManager, ILogger logger)
         {
-            _logger.Debug("InstanceId: " + _instanceId);
             _uow = uow;
             _roleManager = roleManager;
             _userManager = userManager;
             _signInManager = signInManager;
             _authenticationManager = authenticationManager;
+            _logger = logger;
+
+            _logger.Debug("InstanceId: " + _instanceId);
         }
 
         // GET: Roles

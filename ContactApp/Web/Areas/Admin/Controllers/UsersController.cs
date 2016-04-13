@@ -3,22 +3,33 @@ using System.Net;
 using System.Web.Mvc;
 using DAL.Interfaces;
 using Domain.Identity;
+using Microsoft.Owin.Security;
 
 namespace Web.Areas.Admin.Controllers
 {
     [Authorize(Roles = "Admin")]
     public class UsersController : Controller
     {
-        private readonly NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
+        private readonly NLog.ILogger _logger;
         private readonly string _instanceId = Guid.NewGuid().ToString();
 
-        //private WebAppEFContext db = new WebAppEFContext();
         private readonly IUOW _uow;
 
-        public UsersController(IUOW uow)
+        private readonly ApplicationRoleManager _roleManager;
+        private readonly ApplicationSignInManager _signInManager;
+        private readonly ApplicationUserManager _userManager;
+        private readonly IAuthenticationManager _authenticationManager;
+
+        public UsersController(IUOW uow, NLog.ILogger logger, ApplicationRoleManager roleManager, ApplicationSignInManager signInManager, ApplicationUserManager userManager, IAuthenticationManager authenticationManager)
         {
-            _logger.Debug("InstanceId: " + _instanceId);
+            _logger = logger;
+            _roleManager = roleManager;
+            _signInManager = signInManager;
+            _userManager = userManager;
+            _authenticationManager = authenticationManager;
             _uow = uow;
+
+            _logger.Debug("InstanceId: " + _instanceId);
         }
 
         // GET: Users

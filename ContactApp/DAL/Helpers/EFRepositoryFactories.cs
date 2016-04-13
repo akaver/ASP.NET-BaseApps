@@ -5,29 +5,32 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL.Interfaces;
 using DAL.Repositories;
+using NLog;
 
 namespace DAL.Helpers
 {
     public class EFRepositoryFactories : IDisposable
     {
-        private readonly NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
+        private readonly NLog.ILogger _logger;
         private readonly string _instanceId = Guid.NewGuid().ToString();
 
         private readonly IDictionary<Type, Func<IDbContext, object>> _repositoryFactories;
 
-        public EFRepositoryFactories()
+        public EFRepositoryFactories(ILogger logger)
         {
+            _logger = logger;
             _logger.Debug("InstanceId: " + _instanceId);
 
             _repositoryFactories = GetCustomFactories();
         }
 
         //this ctor is for testing only, you can give here an arbitrary list of repos
-        public EFRepositoryFactories(IDictionary<Type, Func<IDbContext, object>> factories)
+        public EFRepositoryFactories(IDictionary<Type, Func<IDbContext, object>> factories, ILogger logger)
         {
-            _logger.Debug("InstanceId: " + _instanceId);
-
+            _logger = logger;
             _repositoryFactories = factories;
+
+            _logger.Debug("InstanceId: " + _instanceId);
         }
 
         //special repos with custom interfaces are registered here

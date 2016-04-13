@@ -17,7 +17,7 @@ namespace Identity
     public class RoleStoreInt :
         RoleStore<int, RoleInt, UserInt, UserClaimInt, UserLoginInt, UserRoleInt, IRoleIntRepository>
     {
-        public RoleStoreInt(IUOW uow, NLog.Logger logger)
+        public RoleStoreInt(IUOW uow, NLog.ILogger logger)
             : base(uow, logger)
         {
         }
@@ -29,7 +29,7 @@ namespace Identity
     public class RoleStore : RoleStore<string, Role, User, UserClaim, UserLogin, UserRole, IRoleRepository>,
         IRoleStore<Role>
     {
-        public RoleStore(IUOW uow, NLog.Logger logger)
+        public RoleStore(IUOW uow, NLog.ILogger logger)
             : base(uow, logger)
         {
         }
@@ -48,12 +48,12 @@ namespace Identity
         where TRepo : class, IRoleRepository<TKey, TRole>
     {
         private readonly IUOW _uow;
-        private readonly NLog.Logger _logger;
+        private readonly NLog.ILogger _logger;
 
         private bool _disposed;
         private readonly string _instanceId = Guid.NewGuid().ToString();
 
-        public RoleStore(IUOW uow, NLog.Logger logger)
+        public RoleStore(IUOW uow, NLog.ILogger logger)
         {
             _logger = logger;
             _logger.Debug("InstanceId: " + _instanceId);

@@ -26,20 +26,17 @@ namespace Web.Areas.Admin.Controllers
         private readonly ApplicationUserManager _userManager;
         private readonly IAuthenticationManager _authenticationManager;
 
-        public UserRolesController(ILogger logger, IUOW uow)
+        public UserRolesController(ILogger logger, IUOW uow, ApplicationRoleManager roleManager, ApplicationSignInManager signInManager,
+            ApplicationUserManager userManager, IAuthenticationManager authenticationManager)
         {
             _logger = logger;
-            _logger.Debug("InstanceId: " + _instanceId);
-
             _uow = uow;
-            /*
-            , ApplicationRoleManager roleManager, ApplicationSignInManager signInManager,
-            ApplicationUserManager userManager, IAuthenticationManager authenticationManager
             _roleManager = roleManager;
             _signInManager = signInManager;
             _userManager = userManager;
             _authenticationManager = authenticationManager;
-            */
+
+            _logger.Debug("InstanceId: " + _instanceId);
         }
 
         // GET: UserRoles

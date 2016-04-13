@@ -10,6 +10,7 @@ using DAL.Interfaces;
 using DAL.Repositories;
 using Domain.Identity;
 using Microsoft.AspNet.Identity;
+using NLog;
 
 namespace Identity
 {
@@ -21,9 +22,11 @@ namespace Identity
         IRoleIntRepository, IUserClaimIntRepository, IUserLoginIntRepository, IUserIntRepository, IUserRoleIntRepository
         >
     {
-        public UserStoreInt(IUOW uow)
-            : base(uow)
+        private readonly NLog.ILogger _logger;
+        public UserStoreInt(IUOW uow, ILogger logger)
+            : base(uow, logger)
         {
+            _logger = logger;
         }
     }
 
@@ -35,9 +38,11 @@ namespace Identity
         IRoleRepository, IUserClaimRepository, IUserLoginRepository, IUserRepository, IUserRoleRepository>,
         IUserStore<User>
     {
-        public UserStore(IUOW uow)
-            : base(uow)
+        private readonly NLog.ILogger _logger;
+        public UserStore(IUOW uow, ILogger logger)
+            : base(uow, logger)
         {
+            _logger = logger;
         }
     }
 
@@ -72,16 +77,18 @@ namespace Identity
         where TUserRoleRepository : class, IUserRoleRepository<TKey, TUserRole>
 
     {
-        private readonly NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
+        private readonly NLog.ILogger _logger;
         private readonly string _instanceId = Guid.NewGuid().ToString();
 
         private readonly IUOW _uow;
         private bool _disposed;
 
-        public UserStore(IUOW uow)
+        public UserStore(IUOW uow, ILogger logger)
         {
-            _logger.Debug("InstanceId: " + _instanceId);
             _uow = uow;
+            _logger = logger;
+
+            _logger.Debug("InstanceId: " + _instanceId);
         }
 
         #region dispose

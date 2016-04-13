@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
+using NLog;
 using Web.Models;
 
 namespace Web
@@ -14,12 +15,13 @@ namespace Web
     // Configure the application user manager used in this application. UserManager is defined in ASP.NET Identity and is used by the application.
     public class ApplicationUserManager : UserManager<UserInt, int>
     {
-        private readonly NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
+        private readonly NLog.ILogger _logger;
         private readonly string _instanceId = Guid.NewGuid().ToString();
 
-        public ApplicationUserManager(IUserStore<UserInt, int> store)
+        public ApplicationUserManager(IUserStore<UserInt, int> store, ILogger logger)
             : base(store)
         {
+            _logger = logger;
             _logger.Debug("InstanceId: " + _instanceId);
 
             // Configure validation logic for usernames
@@ -69,12 +71,13 @@ namespace Web
     // Configure the application sign-in manager which is used in this application.
     public class ApplicationSignInManager : SignInManager<UserInt, int>
     {
-        private readonly NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
+        private readonly NLog.ILogger _logger;
         private readonly string _instanceId = Guid.NewGuid().ToString();
 
-        public ApplicationSignInManager(ApplicationUserManager userManager, IAuthenticationManager authenticationManager)
+        public ApplicationSignInManager(ApplicationUserManager userManager, IAuthenticationManager authenticationManager, ILogger logger)
             : base(userManager, authenticationManager)
         {
+            _logger = logger;
             _logger.Debug("InstanceId: " + _instanceId);
         }
 
@@ -91,11 +94,12 @@ namespace Web
 
     public class ApplicationRoleManager : RoleManager<RoleInt, int>
     {
-        private readonly NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
+        private readonly NLog.ILogger _logger;
         private readonly string _instanceId = Guid.NewGuid().ToString();
 
-        public ApplicationRoleManager(IRoleStore<RoleInt, int> store) : base(store)
+        public ApplicationRoleManager(IRoleStore<RoleInt, int> store, ILogger logger) : base(store)
         {
+            _logger = logger;
             _logger.Debug("InstanceId: " + _instanceId);
             RoleValidator = new RoleValidator<RoleInt, int>(this);
         }
