@@ -25,11 +25,12 @@ namespace Web.Controllers
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager,
             IAuthenticationManager authenticationManager, ILogger logger)
         {
-            _logger.Debug("InstanceId: " + _instanceId);
             _userManager = userManager;
             _signInManager = signInManager;
             _authenticationManager = authenticationManager;
             _logger = logger;
+
+            _logger.Debug("InstanceId: " + _instanceId);
         }
 
         //

@@ -2,31 +2,64 @@
 <ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ArrayOfArrayOfString>
     <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\domain\person.cs</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Areas\Admin\Controllers\UserRolesController.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\global.asax.cs</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Areas\Admin\Controllers\UsersController.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\scripts\app\jquery.validate.globalize.datetime.js</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Areas\Admin\Controllers\UserLoginsController.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\domain\contacttype.cs</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Areas\Admin\Controllers\UserClaimsController.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\domain\multilangstring.cs</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Areas\Admin\Controllers\TranslationsController.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\domain\translation.cs</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Areas\Admin\Controllers\SystemLogController.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Web.config</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Areas\Admin\Controllers\RolesController.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\app_start\bundleconfig.cs</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Areas\Admin\Controllers\MultiLangStringsController.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\!dev\git\ASP.NET-BaseApps\.gitignore</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Areas\Admin\Controllers\HomeController.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\App_Start\NinjectWebCommon.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\App_Start\IdentityConfig.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Identity\RoleStore.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Controllers\AccountController.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Controllers\ManageController.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\DAL\Helpers\EFRepositoryFactories.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\DAL\Helpers\EFRepositoryProvider.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\DAL\Repositories\EFRepository.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Identity\UserStore.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\DAL\Repositories\ArticleRepository.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\DAL\Repositories\ContactRepository.cs</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>
