@@ -6,6 +6,7 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Data.Entity.Validation;
 using System.Diagnostics;
 using System.Linq;
+using System.Web;
 using DataAnnotations;
 using DAL.EFConfiguration;
 using DAL.Helpers;
@@ -21,12 +22,15 @@ namespace DAL
     {
         private readonly NLog.ILogger _logger;
         private readonly string _instanceId = Guid.NewGuid().ToString();
+        private readonly IUserNameResolver _userNameResolver;
 
         [Inject]
-        public DataBaseContext(ILogger logger)
+        public DataBaseContext(IUserNameResolver userNameResolver, ILogger logger)
             : base("name=DataBaseConnectionStr")
         {
             _logger = logger;
+            _userNameResolver = userNameResolver;
+
             _logger.Debug("InstanceId: " + _instanceId);
 
             //Database.SetInitializer(new MigrateDatabaseToLatestVersion<DataBaseContext,Migrations.Configuration>());
@@ -46,7 +50,7 @@ namespace DAL
         }
 
         //hack for mvc scaffolding, paramaterles constructor is required
-        public DataBaseContext() : this(NLog.LogManager.GetCurrentClassLogger())
+        public DataBaseContext() : this(new UserNameResolver(() => "Anonymous") , NLog.LogManager.GetCurrentClassLogger())
         {
 
         }
@@ -115,8 +119,26 @@ namespace DAL
 
         public override int SaveChanges()
         {
-            // or watch this inside exception ((System.Data.Entity.Validation.DbEntityValidationException)$exception).EntityValidationErrors
 
+            // Update metafields in entitys, that implement IBaseEntity - CreatedAtDT, CreatedBy, etc
+            var entities =
+                ChangeTracker.Entries()
+                .Where(x => x.Entity is IBaseEntity && (x.State == EntityState.Added || x.State == EntityState.Modified));
+
+            foreach (var entity in entities)
+            {
+                if (entity.State == EntityState.Added)
+                {
+                    ((IBaseEntity)entity.Entity).CreatedAtDT = DateTime.Now;
+                    ((IBaseEntity)entity.Entity).CreatedBy = _userNameResolver.CurrentUserName;
+                }
+
+                ((IBaseEntity)entity.Entity).ModifiedAtDT = DateTime.Now;
+                ((IBaseEntity)entity.Entity).ModifiedBy = _userNameResolver.CurrentUserName;
+            }
+
+            // Custom exception - gives much more details why EF Validation failed
+            // or watch this inside exception ((System.Data.Entity.Validation.DbEntityValidationException)$exception).EntityValidationErrors
             try
             {
                 return base.SaveChanges();

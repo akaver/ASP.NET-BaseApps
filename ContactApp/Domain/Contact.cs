@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public class Contact
+    public class Contact : BaseEntity
     {
         public int ContactId { get; set; }
 

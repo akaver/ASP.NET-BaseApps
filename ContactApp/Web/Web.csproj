@@ -269,6 +269,7 @@
     <Compile Include="Helpers\PasswordHelper.cs" />
     <Compile Include="Helpers\SessionHelper.cs" />
     <Compile Include="Helpers\StringHelper.cs" />
+    <Compile Include="Helpers\UserNameFactory.cs" />
     <Compile Include="ViewModels\AccountBindingModels.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="ViewModels\ApiAccountViewModels.cs" />
@@ -1972,6 +1973,11 @@
     <Content Include="bower_components\cldr-data\main\root\timeZoneNames.json" />
     <Content Include="bower_components\cldr-data\main\root\units.json" />
     <Content Include="bower_components\cldr-data\main\root\variants.json" />
+    <Content Include="App_Data\first-names.json" />
+    <Content Include="App_Data\middle-names.json" />
+    <Content Include="App_Data\names.json" />
+    <Content Include="App_Data\places.json" />
+    <Content Include="App_Data\countries.json" />
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -2207,7 +2213,6 @@
     <Content Include="Scripts\jquery-2.2.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="logs\" />
     <Folder Include="Views\Base\" />

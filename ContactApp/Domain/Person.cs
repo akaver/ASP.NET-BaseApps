@@ -9,19 +9,19 @@ using Domain.Identity;
 
 namespace Domain
 {
-    public class Person
+    public class Person : BaseEntity
     {
         public int PersonId { get; set; }
 
         [Required(ErrorMessageResourceName = "FieldIsRequired", ErrorMessageResourceType = typeof(Resources.Common))]
-        [MinLength(2, ErrorMessageResourceName = "FieldMinLength", ErrorMessageResourceType = typeof(Resources.Common))]
-        [MaxLength(5, ErrorMessageResourceName = "FieldMaxLength", ErrorMessageResourceType = typeof(Resources.Common))]
+        [MinLength(1, ErrorMessageResourceName = "FieldMinLength", ErrorMessageResourceType = typeof(Resources.Common))]
+        [MaxLength(255, ErrorMessageResourceName = "FieldMaxLength", ErrorMessageResourceType = typeof(Resources.Common))]
         [Display(Name = nameof(Resources.Domain.Firstname), ResourceType = typeof(Resources.Domain))]
         public string Firstname { get; set; }
 
         [Required(ErrorMessageResourceName = "FieldIsRequired", ErrorMessageResourceType = typeof(Resources.Common))]
-        [MinLength(2, ErrorMessageResourceName = "FieldMinLength", ErrorMessageResourceType = typeof(Resources.Common))]
-        [MaxLength(5, ErrorMessageResourceName = "FieldMaxLength", ErrorMessageResourceType = typeof(Resources.Common))]
+        [MinLength(1, ErrorMessageResourceName = "FieldMinLength", ErrorMessageResourceType = typeof(Resources.Common))]
+        [MaxLength(255, ErrorMessageResourceName = "FieldMaxLength", ErrorMessageResourceType = typeof(Resources.Common))]
         [Display(Name = nameof(Resources.Domain.Lastname), ResourceType = typeof(Resources.Domain))]
         public string Lastname { get; set; }
 
