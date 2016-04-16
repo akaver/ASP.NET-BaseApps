@@ -10,6 +10,8 @@ using DAL;
 using DAL.Interfaces;
 using Domain;
 using Microsoft.AspNet.Identity;
+using PagedList;
+using Web.ViewModels;
 
 
 namespace Web.Controllers
@@ -25,9 +27,23 @@ namespace Web.Controllers
         }
 
         // GET: Persons
-        public ActionResult Index()
+        public ActionResult Index(PersonIndexViewModel vm)
         {
-            return View(_uow.Persons.GetAllForUser(User.Identity.GetUserId<int>()));
+            int totalUserCount;
+            string realSortProperty;
+
+            // if not set, set base values
+            vm.PageNumber = vm.PageNumber ?? 1;
+            vm.PageSize = vm.PageSize ?? 25;
+
+            var res = _uow.Persons.GetAllForUser(User.Identity.GetUserId<int>(), vm.Filter, vm.SortProperty, vm.PageNumber.Value-1, vm.PageSize.Value, out totalUserCount, out realSortProperty);
+
+            vm.SortProperty = realSortProperty;
+
+            // https://github.com/kpi-ua/X.PagedList
+            vm.Persons = new StaticPagedList<Person>(res, vm.PageNumber.Value, vm.PageSize.Value, totalUserCount);
+
+            return View(vm);
         }
 
         // GET: Persons/Details/5
@@ -42,6 +58,7 @@ namespace Web.Controllers
             {
                 return HttpNotFound();
             }
+
             return View(person);
         }
 

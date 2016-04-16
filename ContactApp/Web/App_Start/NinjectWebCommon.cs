@@ -89,7 +89,7 @@ namespace Web
             // http://stackoverflow.com/questions/5646820/logger-wrapper-best-practice
             kernel.Bind<NLog.ILogger>().ToMethod(a => NLog.LogManager.GetCurrentClassLogger());
 
-            kernel.Bind<IUserNameResolver>().ToMethod(a => new UserNameResolver(UserNameFactory.GetCurrentUserNameFactory())).InRequestScope();
+            kernel.Bind<IUserNameResolver>().ToMethod(a => new UserNameResolver(UserNameFactory.GetCurrentUserNameFactory())).InSingletonScope();
         }
     }
 }
