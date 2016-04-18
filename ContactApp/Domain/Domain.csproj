@@ -51,6 +51,16 @@
   <ItemGroup>
     <Compile Include="Article.cs" />
     <Compile Include="BaseEntity.cs" />
+    <Compile Include="Workout.cs" />
+    <Compile Include="PlanType.cs" />
+    <Compile Include="Plan.cs" />
+    <Compile Include="PersonRoleInPlan.cs" />
+    <Compile Include="PersonInPlan.cs" />
+    <Compile Include="Participation.cs" />
+    <Compile Include="ExerciseType.cs" />
+    <Compile Include="ExerciseInWorkout.cs" />
+    <Compile Include="Exercise.cs" />
+    <Compile Include="Competition.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="ContactType.cs" />
     <Compile Include="Identity\Role.cs" />
