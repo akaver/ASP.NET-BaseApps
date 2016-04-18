@@ -27,9 +27,13 @@ namespace Web.Controllers
         // GET: Contacts
         public ActionResult Index()
         {
+            var vm = new ContactIndexViewModel()
+            {
+                Contacts = _uow.Contacts.AllforUser(User.Identity.GetUserId<int>())
+            };
+            vm.ContactCount = vm.Contacts.Count;
 
-            var contacts = _uow.Contacts.AllforUser(User.Identity.GetUserId<int>());
-            return View(contacts);
+            return View(vm);
         }
 
         // GET: Contacts/Details/5

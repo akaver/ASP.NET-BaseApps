@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Domain.Contact>
+﻿@model Web.ViewModels.ContactIndexViewModel
 
 @{
     ViewBag.Title = "Index";
@@ -9,21 +9,24 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+<p>
+    @Model.ContactCount
+</p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Person.FirstLastname)
+            @Html.DisplayNameFor(model => model.Contacts.FirstOrDefault().Person.FirstLastname)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ContactType.ContactTypeName)
+            @Html.DisplayNameFor(model => model.Contacts.FirstOrDefault().ContactType.ContactTypeName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ContactValue)
+            @Html.DisplayNameFor(model => model.Contacts.FirstOrDefault().ContactValue)
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+@foreach (var item in Model.Contacts) {
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Person.FirstLastname)

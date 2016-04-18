@@ -2,64 +2,37 @@
 <ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ArrayOfArrayOfString>
     <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\areas\admin\controllers\userrolescontroller.cs</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Controllers\PersonsController.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\areas\admin\controllers\userscontroller.cs</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\ViewModels\PersonViewModels.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\areas\admin\controllers\userloginscontroller.cs</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Views\Persons\Index.cshtml</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\areas\admin\controllers\userclaimscontroller.cs</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\DAL\Interfaces\IPersonRepository.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\areas\admin\controllers\translationscontroller.cs</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\DAL\Repositories\PersonRepository.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\areas\admin\controllers\systemlogcontroller.cs</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Views\Shared\_Layout.cshtml</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\areas\admin\controllers\rolescontroller.cs</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\App_Start\BundleConfig.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\areas\admin\controllers\multilangstringscontroller.cs</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Helpers\UserNameFactory.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\areas\admin\controllers\homecontroller.cs</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\DAL\Helpers\EFRepositoryFactories.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\app_start\ninjectwebcommon.cs</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Views\Persons\Create.cshtml</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\app_start\identityconfig.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\identity\rolestore.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\controllers\accountcontroller.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\controllers\managecontroller.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\dal\helpers\efrepositoryfactories.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\dal\helpers\efrepositoryprovider.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\dal\repositories\efrepository.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Identity\UserStore.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\dal\repositories\articlerepository.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\dal\repositories\contactrepository.cs</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Views\Persons\_CreateEdit.cshtml</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

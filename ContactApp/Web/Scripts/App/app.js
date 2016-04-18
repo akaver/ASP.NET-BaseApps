@@ -18,6 +18,7 @@ $.when(
     // Initialise Globalize to the current UI culture
     Globalize.locale(currentCultureCode);
     moment.locale(currentCultureCode);
+    //moment.localeData("et")._longDateFormat.LT = "HH:mm";
 });
 
 $(function () {

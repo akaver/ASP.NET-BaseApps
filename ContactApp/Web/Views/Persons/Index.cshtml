@@ -33,7 +33,7 @@
                 </div>
             </div>
         }
-        @Html.PagedListPager(Model.Persons, page => Url.Action("Index", new { PageNumber = page }))
+        @Html.PagedListPager(Model.Persons, page => Url.Action("Index", new { PageNumber = page, filter = Model.Filter }))
         <p>
             Total: @Model.Persons.TotalItemCount
         </p>
