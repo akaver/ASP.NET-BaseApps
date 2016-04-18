@@ -33,17 +33,34 @@ namespace Domain
         [Display(Name = "Weight", ResourceType = typeof(Resources.Domain))]
         public int? Weight { get; set; }
 
-        [DataType(DataType.Date)]
-        [Display(Name = "BirthDate", ResourceType = typeof(Resources.Domain))]
-        public DateTime BirthDate { get; set; }
-
         [DataType(DataType.DateTime)]
-        [Display(Name = "DateCreated", ResourceType = typeof(Resources.Domain))]
-        public DateTime? DateCreated { get; set; }
+        public DateTime DateTime { get; set; }
+
+        [DataType(DataType.Date)]
+        public DateTime Date { get; set; }
 
         [DataType(DataType.Time)]
-        [Display(Name = "Time", ResourceType = typeof(Resources.Domain))]
         public DateTime Time { get; set; }
+
+
+        [Display(Name = nameof(Resources.Domain.Person_DateTime2), ResourceType = typeof(Resources.Domain))]
+        [DataType(DataType.DateTime, ErrorMessageResourceName = "FieldMustBeDataTypeDateTime", ErrorMessageResourceType = typeof(Resources.Common))]
+        [Required(ErrorMessageResourceName = "FieldIsRequired", ErrorMessageResourceType = typeof(Resources.Common))]
+        public DateTime DateTime2 { get; set; }
+
+        [Display(Name = nameof(Resources.Domain.Person_Date2), ResourceType = typeof(Resources.Domain))]
+        [DataType(DataType.Date, ErrorMessageResourceName = "FieldMustBeDataTypeDate", ErrorMessageResourceType = typeof(Resources.Common))]
+        [Required(ErrorMessageResourceName = "FieldIsRequired", ErrorMessageResourceType = typeof(Resources.Common))]
+        public DateTime Date2 { get; set; }
+
+        [Display(Name = nameof(Resources.Domain.Person_Time2), ResourceType = typeof(Resources.Domain))]
+        [DataType(DataType.Time, ErrorMessageResourceName = "FieldMustBeDataTypeTime", ErrorMessageResourceType = typeof(Resources.Common), ErrorMessage = null)]
+        [Required(ErrorMessageResourceName = "FieldIsRequired", ErrorMessageResourceType = typeof(Resources.Common))]
+        public DateTime Time2 { get; set; }
+
+        [ForeignKey(nameof(User))]
+        public int UserId { get; set; }
+        public virtual UserInt User { get; set; }
 
         public virtual List<Contact> Contacts { get; set; }
         public virtual List<PersonInPlan> PersonInPlans { get; set; }

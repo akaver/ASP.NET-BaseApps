@@ -21,8 +21,8 @@ namespace DAL.Repositories
                 DbSet.Where(u => u.Person.UserId == userId)
                     .Include(p => p.Person)
                     .Include(t => t.ContactType)
-                    .OrderBy(p => p.Person.Lastname)
-                    .ThenBy(p => p.Person.Firstname)
+                    .OrderBy(p => p.Person.LastName)
+                    .ThenBy(p => p.Person.FirstName)
                     .ToList();
         }
 

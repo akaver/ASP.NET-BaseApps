@@ -101,8 +101,8 @@ namespace DAL
 
                 context.Persons.Add(new Person()
                 {
-                    Firstname = firstName,
-                    Lastname = lastName,
+                    FirstName = firstName,
+                    LastName = lastName,
                     UserId = userId,
 
                     Contacts = new List<Contact>()

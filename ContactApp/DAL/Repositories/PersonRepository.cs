@@ -17,7 +17,7 @@ namespace DAL.Repositories
 
         public List<Person> GetAllForUser(int userId)
         {
-            return DbSet.Where(p => p.UserId == userId).OrderBy(o => o.Lastname).ThenBy(o => o.Firstname).Include(c => c.Contacts).ToList();
+            return DbSet.Where(p => p.UserId == userId).OrderBy(o => o.LastName).ThenBy(o => o.FirstName).Include(c => c.Contacts).ToList();
         }
 
         public Person GetForUser(int personId, int userId)
@@ -39,7 +39,7 @@ namespace DAL.Repositories
             // filter records
             if (!string.IsNullOrWhiteSpace(filter))
             {
-                res = res.Where(p => p.Firstname.ToLower().Contains(filter) || p.Lastname.ToLower().Contains(filter));
+                res = res.Where(p => p.FirstName.ToLower().Contains(filter) || p.LastName.ToLower().Contains(filter));
             }
 
             // set up sorting
@@ -47,22 +47,22 @@ namespace DAL.Repositories
             {
                 case "_firstname":
                     res = res
-                        .OrderByDescending(o => o.Firstname).ThenBy(o => o.Lastname);
+                        .OrderByDescending(o => o.FirstName).ThenBy(o => o.LastName);
                     break;
                 case "firstname":
                     res = res
-                        .OrderBy(o => o.Firstname).ThenBy(o => o.Lastname);
+                        .OrderBy(o => o.FirstName).ThenBy(o => o.LastName);
                     break;
 
                 case "_lastname":
                     res = res
-                        .OrderByDescending(o => o.Lastname).ThenBy(o => o.Firstname);
+                        .OrderByDescending(o => o.LastName).ThenBy(o => o.FirstName);
                     break;
 
                 default:
                 case "lastname":
                     res = res
-                        .OrderBy(o => o.Lastname).ThenBy(o => o.Firstname);
+                        .OrderBy(o => o.LastName).ThenBy(o => o.FirstName);
                     realSortProperty = "lastname";
                     break;
             }
