@@ -2,37 +2,59 @@
 <ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ArrayOfArrayOfString>
     <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Domain\BaseEntity.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Domain\Person.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\DAL\DataBaseContext.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\HtmlHelpers\DateTimeEditors.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Views\Persons\_CreateEdit.cshtml</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Scripts\App\jquery.validate.fixdata.js</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Scripts\App\jquery.validate.globalize.datetime.js</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Scripts\App\app.js</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\App_Data\names.json</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\DAL\DatabaseInitializer.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
       <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Controllers\PersonsController.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\ViewModels\PersonViewModels.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Views\Persons\Index.cshtml</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\DAL\Interfaces\IPersonRepository.cs</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\DAL\Repositories\PersonRepository.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Views\Shared\_Layout.cshtml</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Views\Persons\Index.cshtml</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\App_Start\BundleConfig.cs</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\App_Start\NinjectWebCommon.cs</string>
     </ArrayOfString>
     <ArrayOfString>
       <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Helpers\UserNameFactory.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\DAL\Helpers\EFRepositoryFactories.cs</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Controllers\ContactsController.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Views\Persons\Create.cshtml</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\ViewModels\ContactViewModels.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Views\Persons\_CreateEdit.cshtml</string>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Views\Contacts\Index.cshtml</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\ViewModels\PersonViewModels.cs</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

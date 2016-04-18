@@ -17,7 +17,7 @@
     // https://github.com/jquery/globalize/blob/master/doc/api/date/date-formatter.md
     $.validator.methods.dateGlobalizeOptions = { dateParseFormat: [{ skeleton: "yMd" }, { skeleton: "yMMMd" }, { date: "short" }, { date: "medium" }, { date: "long" }, { date: "full" }] };
     $.validator.methods.timeGlobalizeOptions = { dateParseFormat: [{ skeleton: "Hm" }, { skeleton: "hm" }, { time: "short" }, { time: "medium" }, { time: "long" }, { time: "full" }] };
-    $.validator.methods.datetimeGlobalizeOptions = { dateParseFormat: [{ skeleton: "yMdHm" }, { skeleton: "yMdhm" }, { datetime: "short" }, { datetime: "medium" }, { datetime: "long" }, { datetime: "full" }] };
+    $.validator.methods.datetimeGlobalizeOptions = { dateParseFormat: [{ skeleton: "yMdHm" }, { skeleton: "yMdhm" }, { datetime: "short" }, { datetime: "medium" }, { datetime: "long" }, { datetime: "full" }, {raw: "d.M.y H:m"}] };
 
 
     // Tell the validator that we want dates parsed using Globalize
@@ -70,7 +70,7 @@
 
         for (var i = 0; i < $.validator.methods.datetimeGlobalizeOptions.dateParseFormat.length; i++) {
             val = Globalize.parseDate(value, $.validator.methods.datetimeGlobalizeOptions.dateParseFormat[i]);
-            console.log($.validator.methods.datetimeGlobalizeOptions.dateParseFormat[i], val, Globalize.dateFormatter($.validator.methods.datetimeGlobalizeOptions.dateParseFormat[i])(new Date(2016, 1, 1, 23, 59, 0)));
+            console.log($.validator.methods.datetimeGlobalizeOptions.dateParseFormat[i], val, Globalize.dateFormatter($.validator.methods.datetimeGlobalizeOptions.dateParseFormat[i])(new Date(2016, 1, 1, 1, 1, 1)));
             res = res || (val instanceof Date);
             if (res === true) return res;
         }

@@ -6,6 +6,7 @@
 
     //Move them to some html helper class?
     // https://msdn.microsoft.com/en-us/library/bb549151(v=vs.110).aspx
+    // 2 parameter types and result type
     Func<string, string, string> getSortProperty = (propertyName, currentSortProperty) => currentSortProperty == propertyName ? "_" + propertyName : propertyName;
 
     Func<string, string, string> getSortIcon = (propertyName, currentSortProperty) => currentSortProperty == propertyName ? "fa-sort-up" : currentSortProperty == "_" + propertyName ? "fa-sort-down" : "fa-sort";
