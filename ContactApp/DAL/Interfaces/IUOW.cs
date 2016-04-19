@@ -19,7 +19,6 @@ namespace DAL.Interfaces
         T GetRepository<T>() where T : class;
 
         // standard autocreated repos, since we do not have any special methods in interfaces
-        IEFRepository<ContactType> ContactTypes { get; }
         IEFRepository<MultiLangString> MultiLangStrings { get; }
         IEFRepository<Translation> Translations { get; }
 
@@ -27,6 +26,17 @@ namespace DAL.Interfaces
         IPersonRepository Persons { get; }
         IContactRepository Contacts { get; }
         IArticleRepository Articles { get; }
+        IContactTypeRepository ContactTypes { get; }
+        ICompetitionRepository Competitions { get; }
+        IExerciseInWorkoutRepository ExerciseInWorkouts { get; }
+        IExerciseRepository Exercises { get; }
+        IExerciseTypeRepository ExerciseTypes { get; }
+        IParticipationRepository Participations { get; }
+        IPlanTypeRepository PlanTypes { get; }
+        IPlanRepository Plans { get; }
+        IWorkoutRepository Workouts { get; }
+        IPersonInPlanRepository PersonInPlans { get; }
+        IPersonRoleInPlanRepository PersonRoleInPlans { get; }
 
 
         // Identity, PK - string

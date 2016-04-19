@@ -53,7 +53,7 @@ namespace Web.Controllers
             // ReSharper disable once UseObjectOrCollectionInitializer
             var vm = new ContactCreateEditViewModel();
             vm.ContactTypeSelectList = new SelectList(_uow.ContactTypes.All.Select(t => new {t.ContactTypeId, ContactTypeName = t.ContactTypeName.Translate()}).ToList(), nameof(ContactType.ContactTypeId), nameof(ContactType.ContactTypeName));
-            vm.PersonSelectList = new SelectList(_uow.Persons.GetAllForUser(User.Identity.GetUserId<int>()), nameof(Person.PersonId), nameof(Person.FirstLastname));
+            vm.PersonSelectList = new SelectList(_uow.Persons.GetAllForUser(User.Identity.GetUserId<int>()), nameof(Person.PersonId), nameof(Person.FirstLastName));
             return View(vm);
         }
 
@@ -72,7 +72,7 @@ namespace Web.Controllers
             }
 
             vm.ContactTypeSelectList = new SelectList(_uow.ContactTypes.All.Select(t => new { t.ContactTypeId, ContactTypeName = t.ContactTypeName.Translate() }).ToList(), nameof(ContactType.ContactTypeId), nameof(ContactType.ContactTypeName), vm.Contact.ContactTypeId);
-            vm.PersonSelectList = new SelectList(_uow.Persons.GetAllForUser(User.Identity.GetUserId<int>()), nameof(Person.PersonId), nameof(Person.FirstLastname), vm.Contact.PersonId);
+            vm.PersonSelectList = new SelectList(_uow.Persons.GetAllForUser(User.Identity.GetUserId<int>()), nameof(Person.PersonId), nameof(Person.FirstLastName), vm.Contact.PersonId);
             return View(vm);
         }
 
@@ -92,7 +92,7 @@ namespace Web.Controllers
             var vm = new ContactCreateEditViewModel();
             vm.Contact = contact;
             vm.ContactTypeSelectList = new SelectList(_uow.ContactTypes.All.Select(t => new { t.ContactTypeId, ContactTypeName = t.ContactTypeName.Translate() }).ToList(), nameof(ContactType.ContactTypeId), nameof(ContactType.ContactTypeName), vm.Contact.ContactTypeId);
-            vm.PersonSelectList = new SelectList(_uow.Persons.GetAllForUser(User.Identity.GetUserId<int>()), nameof(Person.PersonId), nameof(Person.FirstLastname), vm.Contact.PersonId);
+            vm.PersonSelectList = new SelectList(_uow.Persons.GetAllForUser(User.Identity.GetUserId<int>()), nameof(Person.PersonId), nameof(Person.FirstLastName), vm.Contact.PersonId);
 
             return View(vm);
         }
@@ -111,7 +111,7 @@ namespace Web.Controllers
                 return RedirectToAction(nameof(Index));
             }
             vm.ContactTypeSelectList = new SelectList(_uow.ContactTypes.All.Select(t => new { t.ContactTypeId, ContactTypeName = t.ContactTypeName.Translate() }).ToList(), nameof(ContactType.ContactTypeId), nameof(ContactType.ContactTypeName), vm.Contact.ContactTypeId);
-            vm.PersonSelectList = new SelectList(_uow.Persons.GetAllForUser(User.Identity.GetUserId<int>()), nameof(Person.PersonId), nameof(Person.FirstLastname), vm.Contact.PersonId);
+            vm.PersonSelectList = new SelectList(_uow.Persons.GetAllForUser(User.Identity.GetUserId<int>()), nameof(Person.PersonId), nameof(Person.FirstLastName), vm.Contact.PersonId);
             return View(vm);
         }
 

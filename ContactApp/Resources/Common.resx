@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ApplicationName" xml:space="preserve">
-    <value>MyApplication</value>
+    <value>KT Gym App</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
@@ -127,7 +127,7 @@
     <value>Login</value>
   </data>
   <data name="LogOff" xml:space="preserve">
-    <value>Logg off</value>
+    <value>Log off</value>
   </data>
   <data name="ManageAccount" xml:space="preserve">
     <value>Manage account</value>
@@ -164,5 +164,41 @@
   </data>
   <data name="FieldMustBeDataTypeTime" xml:space="preserve">
     <value>The field {0} must be a time.</value>
+  </data>
+  <data name="Competitions" xml:space="preserve">
+    <value>Competitions</value>
+  </data>
+  <data name="Contacts" xml:space="preserve">
+    <value>Contacts</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Exercises" xml:space="preserve">
+    <value>Exercises</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Participations" xml:space="preserve">
+    <value>Participations</value>
+  </data>
+  <data name="People" xml:space="preserve">
+    <value>People</value>
+  </data>
+  <data name="Plans" xml:space="preserve">
+    <value>Plans</value>
+  </data>
+  <data name="RegisterAsNew" xml:space="preserve">
+    <value>Register as a new user</value>
+  </data>
+  <data name="Workouts" xml:space="preserve">
+    <value>Workouts</value>
   </data>
 </root>

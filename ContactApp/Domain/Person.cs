@@ -9,20 +9,20 @@ using Domain.Identity;
 
 namespace Domain
 {
-    public class Person
+    public class Person : BaseEntity
     {
         public int PersonId { get; set; }
 
         [Required]
         [MaxLength(128, ErrorMessageResourceName = "FirstNameLengthError", ErrorMessageResourceType = typeof(Resources.Domain))]
         [MinLength(1, ErrorMessageResourceName = "FirstNameLengthError", ErrorMessageResourceType = typeof(Resources.Domain))]
-        [Display(Name = "Firstname", ResourceType = typeof(Resources.Domain))]
+        [Display(Name = "FirstName", ResourceType = typeof(Resources.Domain))]
         public string FirstName { get; set; }
 
         [Required]
         [MaxLength(128, ErrorMessageResourceName = "LastNameLengthError", ErrorMessageResourceType = typeof(Resources.Domain))]
         [MinLength(1, ErrorMessageResourceName = "LastNameLengthError", ErrorMessageResourceType = typeof(Resources.Domain))]
-        [Display(Name = "Firstname", ResourceType = typeof(Resources.Domain))]
+        [Display(Name = "LastName", ResourceType = typeof(Resources.Domain))]
         public string LastName { get; set; }
 
         [Range(0, 2048, ErrorMessageResourceName = "HeightOutOfBoundsError", ErrorMessageResourceType = typeof(Resources.Domain))]
@@ -68,8 +68,8 @@ namespace Domain
         public virtual List<Participation> Participations { get; set; }
 
         // not mapped properties, just getters
-        public string FirstLastname => (FirstName + " " + LastName).Trim();
-        public string LastFirstname => (LastName + " " + FirstName).Trim();
+        public string FirstLastName => (FirstName + " " + LastName).Trim();
+        public string LastFirstName => (LastName + " " + FirstName).Trim();
 
 
     }

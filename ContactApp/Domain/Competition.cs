@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public class Competition
+    public class Competition : BaseEntity
     {
         public int CompetitionId { get; set; }
 

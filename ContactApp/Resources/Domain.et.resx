@@ -126,19 +126,19 @@
   <data name="FirstLastName" xml:space="preserve">
     <value>Ees-, perekonnanimi</value>
   </data>
-  <data name="Firstname" xml:space="preserve">
+  <data name="FirstName" xml:space="preserve">
     <value>Eesnimi</value>
   </data>
-  <data name="FirstnameLengthError" xml:space="preserve">
+  <data name="FirstNameLengthError" xml:space="preserve">
     <value>Eesnimi on liiga pikk.</value>
   </data>
   <data name="LastFirstName" xml:space="preserve">
     <value>Pere-, eesnimi</value>
   </data>
-  <data name="Lastname" xml:space="preserve">
+  <data name="LastName" xml:space="preserve">
     <value>Perekonnanimi</value>
   </data>
-  <data name="LastnameLengthError" xml:space="preserve">
+  <data name="LastNameLengthError" xml:space="preserve">
     <value>Perekonnanimi on liiga pikk.</value>
   </data>
   <data name="Person_Date2" xml:space="preserve">

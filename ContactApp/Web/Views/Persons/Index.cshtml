@@ -44,13 +44,13 @@
     <tr>
         <th>
             <a href="@Url.Action("Index", new {SortProperty = getSortProperty("firstname", Model.SortProperty),  Model.Filter})">
-                @Html.DisplayNameFor(model => model.Persons.FirstOrDefault().Firstname)
+                @Html.DisplayNameFor(model => model.Persons.FirstOrDefault().FirstName)
                 <i class="fa @getSortIcon("firstname", Model.SortProperty)"></i>
             </a>
         </th>
         <th>
             <a href="@Url.Action("Index", new {SortProperty = getSortProperty("lastname", Model.SortProperty),  Model.Filter})">
-                @Html.DisplayNameFor(model => model.Persons.FirstOrDefault().Lastname)
+                @Html.DisplayNameFor(model => model.Persons.FirstOrDefault().LastName)
                 <i class="fa @getSortIcon("lastname", Model.SortProperty)"></i>
             </a>
         </th>
@@ -65,10 +65,10 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Firstname)
+                @Html.DisplayFor(modelItem => item.FirstName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Lastname)
+                @Html.DisplayFor(modelItem => item.LastName)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DateTime)

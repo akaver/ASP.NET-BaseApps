@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public class PlanType
+    public class PlanType : BaseEntity
     {
         [Key]
         [Display(ResourceType = typeof(Resources.Domain), Name = "EntityPrimaryKey")]

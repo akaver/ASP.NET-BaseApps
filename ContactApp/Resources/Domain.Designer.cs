@@ -108,54 +108,54 @@ namespace Resources {
         /// <summary>
         ///   Looks up a localized string similar to First, Lastname.
         /// </summary>
-        public static string FirstLastname {
+        public static string FirstLastName {
             get {
-                return ResourceManager.GetString("FirstLastname", resourceCulture);
+                return ResourceManager.GetString("FirstLastName", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to First name.
         /// </summary>
-        public static string Firstname {
+        public static string FirstName {
             get {
-                return ResourceManager.GetString("Firstname", resourceCulture);
+                return ResourceManager.GetString("FirstName", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to First name too long..
         /// </summary>
-        public static string FirstnameLengthError {
+        public static string FirstNameLengthError {
             get {
-                return ResourceManager.GetString("FirstnameLengthError", resourceCulture);
+                return ResourceManager.GetString("FirstNameLengthError", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Last, Firstname.
         /// </summary>
-        public static string LastFirstname {
+        public static string LastFirstName {
             get {
-                return ResourceManager.GetString("LastFirstname", resourceCulture);
+                return ResourceManager.GetString("LastFirstName", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Last name.
         /// </summary>
-        public static string Lastname {
+        public static string LastName {
             get {
-                return ResourceManager.GetString("Lastname", resourceCulture);
+                return ResourceManager.GetString("LastName", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Last name too long..
         /// </summary>
-        public static string LastnameLengthError {
+        public static string LastNameLengthError {
             get {
-                return ResourceManager.GetString("LastnameLengthError", resourceCulture);
+                return ResourceManager.GetString("LastNameLengthError", resourceCulture);
             }
         }
         

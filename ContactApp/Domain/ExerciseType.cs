@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public class ExerciseType
+    public class ExerciseType : BaseEntity
     {
         [Key]
         [Display(ResourceType = typeof(Resources.Domain), Name = "EntityPrimaryKey")]

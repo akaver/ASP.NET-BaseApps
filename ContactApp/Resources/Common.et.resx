@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ApplicationName" xml:space="preserve">
-    <value>MinuRakendus</value>
+    <value>KT Jõuka Äpp</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Katkesta</value>
@@ -164,5 +164,41 @@
   </data>
   <data name="FieldMustBeDataTypeTime" xml:space="preserve">
     <value>Väli {0} peab olema kellaaeg.</value>
+  </data>
+  <data name="Competitions" xml:space="preserve">
+    <value>Võistlused</value>
+  </data>
+  <data name="Contacts" xml:space="preserve">
+    <value>Kontaktid</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Kustuta</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Detailid</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Muuda</value>
+  </data>
+  <data name="Exercises" xml:space="preserve">
+    <value>Harjutused</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Avaleht</value>
+  </data>
+  <data name="Participations" xml:space="preserve">
+    <value>Osalemised</value>
+  </data>
+  <data name="People" xml:space="preserve">
+    <value>Inimesed</value>
+  </data>
+  <data name="Plans" xml:space="preserve">
+    <value>Kavad</value>
+  </data>
+  <data name="RegisterAsNew" xml:space="preserve">
+    <value>Registreeru uue kasutajana</value>
+  </data>
+  <data name="Workouts" xml:space="preserve">
+    <value>Trennid</value>
   </data>
 </root>

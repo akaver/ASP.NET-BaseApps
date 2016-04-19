@@ -57,7 +57,17 @@ namespace DAL
 
         public IDbSet<Person> Persons { get; set; }
         public IDbSet<Contact> Contacts { get; set; }
+        public IDbSet<Competition> Competitions { get; set; }
         public IDbSet<ContactType> ContactTypes { get; set; }
+        public IDbSet<Exercise> Exercises { get; set; }
+        public IDbSet<ExerciseInWorkout> ExercisesInWorkouts { get; set; }
+        public IDbSet<ExerciseType> ExerciseTypes { get; set; }
+        public IDbSet<Participation> Participations { get; set; }
+        public IDbSet<Plan> Plans { get; set; }
+        public IDbSet<PlanType> PlanTypes { get; set; }
+        public IDbSet<Workout> Workouts { get; set; }
+        public IDbSet<PersonInPlan> PeopleInPlans { get; set; }
+        public IDbSet<PersonRoleInPlan> PersonRolesInPlans { get; set; }
 
         public IDbSet<Article> Articles { get; set; }
         public IDbSet<MultiLangString> MultiLangStrings { get; set; }

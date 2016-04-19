@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public class Translation
+    public class Translation : BaseEntity
     {
         public int TranslationId { get; set; }
 

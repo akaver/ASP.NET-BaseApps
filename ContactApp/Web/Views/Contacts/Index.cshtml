@@ -12,7 +12,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Person.FirstLastname)
+            @Html.DisplayNameFor(model => model.Person.FirstLastName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.ContactType.ContactTypeName)
@@ -26,7 +26,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Person.FirstLastname)
+            @Html.DisplayFor(modelItem => item.Person.FirstLastName)
         </td>
         <td>
             @item.ContactType.ContactTypeName.Translate()

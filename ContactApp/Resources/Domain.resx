@@ -123,10 +123,10 @@
   <data name="ArticleHeadline" xml:space="preserve">
     <value>Headline</value>
   </data>
-  <data name="FirstLastname" xml:space="preserve">
+  <data name="FirstLastName" xml:space="preserve">
     <value>First, Lastname</value>
   </data>
-  <data name="LastFirstname" xml:space="preserve">
+  <data name="LastFirstName" xml:space="preserve">
     <value>Last, Firstname</value>
   </data>
   <data name="EntityPrimaryKey" xml:space="preserve">
@@ -138,16 +138,16 @@
   <data name="ContactValueLengthError" xml:space="preserve">
     <value>Contact too long.</value>
   </data>
-  <data name="Firstname" xml:space="preserve">
+  <data name="FirstName" xml:space="preserve">
     <value>First name</value>
   </data>
-  <data name="FirstnameLengthError" xml:space="preserve">
+  <data name="FirstNameLengthError" xml:space="preserve">
     <value>First name too long.</value>
   </data>
-  <data name="Lastname" xml:space="preserve">
+  <data name="LastName" xml:space="preserve">
     <value>Last name</value>
   </data>
-  <data name="LastnameLengthError" xml:space="preserve">
+  <data name="LastNameLengthError" xml:space="preserve">
     <value>Last name too long.</value>
   </data>
   <data name="Person_Date2" xml:space="preserve">
