@@ -28,18 +28,18 @@ namespace Web.Controllers
         // GET: Exercises
         public ActionResult Index(ExerciseIndexViewModel vm)
         {
-            int totalUserCount;
+            int totalExerciseCount;
             string realSortProperty;
 
             //if not set, set base values
             vm.PageNumber = vm.PageNumber ?? 1;
             vm.PageSize = vm.PageSize ?? 25;
 
-            var res = _uow.Exercises.All;
-            //TODO kust realSortProperty väärtuse saab?
-            //vm.SortProperty = realSortProperty;
+            var res = _uow.Exercises.GetAllWithFilter(vm.Filter, vm.SortProperty, vm.PageNumber.Value-1, vm.PageSize.Value, out totalExerciseCount, out realSortProperty);
 
-            vm.Exercises = new StaticPagedList<Exercise>(res, vm.PageNumber.Value, vm.PageSize.Value, totalUserCount);
+            vm.SortProperty = realSortProperty;
+
+            vm.Exercises = new StaticPagedList<Exercise>(res, vm.PageNumber.Value, vm.PageSize.Value, totalExerciseCount);
             //var exercises = db.Exercises.Include(e => e.ExerciseType);
             return View(vm);
         }

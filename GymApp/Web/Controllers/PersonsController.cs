@@ -29,7 +29,6 @@ namespace Web.Controllers
         // GET: Persons
         public ActionResult Index(PersonIndexViewModel vm)
         {
-            //TODO kust totalUserCount ja realSortProperty väärtused saavad??
             int totalUserCount;
             string realSortProperty;
 

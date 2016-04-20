@@ -159,4 +159,58 @@
   <data name="Person_Time2" xml:space="preserve">
     <value>Time</value>
   </data>
+  <data name="BirthDate" xml:space="preserve">
+    <value>Birthdate</value>
+  </data>
+  <data name="CompetitionNameLengthError" xml:space="preserve">
+    <value>Competition name length is incorrect.</value>
+  </data>
+  <data name="ContactTypeNameLengthError1" xml:space="preserve">
+    <value>Contact type name length is incorrect.</value>
+  </data>
+  <data name="ContactValueLengthError1" xml:space="preserve">
+    <value>Contact value length is incorrect.</value>
+  </data>
+  <data name="DateCreated" xml:space="preserve">
+    <value>Date of creation</value>
+  </data>
+  <data name="DescriptionLengthError" xml:space="preserve">
+    <value>Description is too long.</value>
+  </data>
+  <data name="ExerciseNameLengthError" xml:space="preserve">
+    <value>Exercise name is too long.</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>Height</value>
+  </data>
+  <data name="HeightOutOfBoundsError" xml:space="preserve">
+    <value>Height is out of bounds.</value>
+  </data>
+  <data name="InstructionsLengthError" xml:space="preserve">
+    <value>Instructions are too long.</value>
+  </data>
+  <data name="RatingOutOfBoundsError" xml:space="preserve">
+    <value>Rating is too high.</value>
+  </data>
+  <data name="RepCountOutOfBoundsError" xml:space="preserve">
+    <value>Too many repetitions.</value>
+  </data>
+  <data name="RepWeightOutOfBoundsError" xml:space="preserve">
+    <value>Repetition weight is too high.</value>
+  </data>
+  <data name="SetCountOutOfBoundsError" xml:space="preserve">
+    <value>Too many sets.</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="VideoURLLengthError" xml:space="preserve">
+    <value>Video URL is too long.</value>
+  </data>
+  <data name="Weight" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="WeightOutOfBoundsError" xml:space="preserve">
+    <value>Weight is out of bounds.</value>
+  </data>
 </root>

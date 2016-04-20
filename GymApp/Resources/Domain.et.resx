@@ -123,6 +123,27 @@
   <data name="ArticleHeadline" xml:space="preserve">
     <value>Pealkiri</value>
   </data>
+  <data name="BirthDate" xml:space="preserve">
+    <value>Sünnikuupäev</value>
+  </data>
+  <data name="CompetitionNameLengthError" xml:space="preserve">
+    <value>Võistluse nime pikkus on vale.</value>
+  </data>
+  <data name="ContactTypeNameLengthError" xml:space="preserve">
+    <value>Kontaktitüübi nime pikkus on vale.</value>
+  </data>
+  <data name="ContactValueLengthError" xml:space="preserve">
+    <value>Kontakti pikkus on vale.</value>
+  </data>
+  <data name="DateCreated" xml:space="preserve">
+    <value>Loomise kuupäev</value>
+  </data>
+  <data name="DescriptionLengthError" xml:space="preserve">
+    <value>Kirjelduse pikkus on vale.</value>
+  </data>
+  <data name="ExerciseNameLengthError" xml:space="preserve">
+    <value>Harjutuse nime pikkus on vale</value>
+  </data>
   <data name="FirstLastName" xml:space="preserve">
     <value>Ees-, perekonnanimi</value>
   </data>
@@ -131,6 +152,15 @@
   </data>
   <data name="FirstNameLengthError" xml:space="preserve">
     <value>Eesnimi on liiga pikk.</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>Pikkus</value>
+  </data>
+  <data name="HeightOutOfBoundsError" xml:space="preserve">
+    <value>Liiga pikk.</value>
+  </data>
+  <data name="InstructionsLengthError" xml:space="preserve">
+    <value>Juhendi pikkus on vale.</value>
   </data>
   <data name="LastFirstName" xml:space="preserve">
     <value>Pere-, eesnimi</value>
@@ -149,5 +179,29 @@
   </data>
   <data name="Person_Time2" xml:space="preserve">
     <value>Kellaaeg</value>
+  </data>
+  <data name="RatingOutOfBoundsError" xml:space="preserve">
+    <value>Hinne piiridest väljas.</value>
+  </data>
+  <data name="RepCountOutOfBoundsError" xml:space="preserve">
+    <value>Korduste arv on piiridest väljas</value>
+  </data>
+  <data name="RepWeightOutOfBoundsError" xml:space="preserve">
+    <value>Korduste raskus on piiridest väljas</value>
+  </data>
+  <data name="SetCountOutOfBoundsError" xml:space="preserve">
+    <value>Seeriate arv on piiridest väljas</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Aeg</value>
+  </data>
+  <data name="VideoURLLengthError" xml:space="preserve">
+    <value>Video URL-i pikkus on vale</value>
+  </data>
+  <data name="Weight" xml:space="preserve">
+    <value>Kaal</value>
+  </data>
+  <data name="WeightOutOfBoundsError" xml:space="preserve">
+    <value>Raskus on piiridest väljas</value>
   </data>
 </root>

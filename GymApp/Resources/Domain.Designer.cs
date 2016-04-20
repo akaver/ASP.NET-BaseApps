@@ -79,11 +79,38 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Birthdate.
+        /// </summary>
+        public static string BirthDate {
+            get {
+                return ResourceManager.GetString("BirthDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Competition name length is incorrect..
+        /// </summary>
+        public static string CompetitionNameLengthError {
+            get {
+                return ResourceManager.GetString("CompetitionNameLengthError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Contact type name too long..
         /// </summary>
         public static string ContactTypeNameLengthError {
             get {
                 return ResourceManager.GetString("ContactTypeNameLengthError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Contact type name length is incorrect..
+        /// </summary>
+        public static string ContactTypeNameLengthError1 {
+            get {
+                return ResourceManager.GetString("ContactTypeNameLengthError1", resourceCulture);
             }
         }
         
@@ -97,11 +124,47 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Contact value length is incorrect..
+        /// </summary>
+        public static string ContactValueLengthError1 {
+            get {
+                return ResourceManager.GetString("ContactValueLengthError1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date of creation.
+        /// </summary>
+        public static string DateCreated {
+            get {
+                return ResourceManager.GetString("DateCreated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description is too long..
+        /// </summary>
+        public static string DescriptionLengthError {
+            get {
+                return ResourceManager.GetString("DescriptionLengthError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Id.
         /// </summary>
         public static string EntityPrimaryKey {
             get {
                 return ResourceManager.GetString("EntityPrimaryKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exercise name is too long..
+        /// </summary>
+        public static string ExerciseNameLengthError {
+            get {
+                return ResourceManager.GetString("ExerciseNameLengthError", resourceCulture);
             }
         }
         
@@ -129,6 +192,33 @@ namespace Resources {
         public static string FirstNameLengthError {
             get {
                 return ResourceManager.GetString("FirstNameLengthError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height.
+        /// </summary>
+        public static string Height {
+            get {
+                return ResourceManager.GetString("Height", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Height is out of bounds..
+        /// </summary>
+        public static string HeightOutOfBoundsError {
+            get {
+                return ResourceManager.GetString("HeightOutOfBoundsError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Instructions are too long..
+        /// </summary>
+        public static string InstructionsLengthError {
+            get {
+                return ResourceManager.GetString("InstructionsLengthError", resourceCulture);
             }
         }
         
@@ -183,6 +273,78 @@ namespace Resources {
         public static string Person_Time2 {
             get {
                 return ResourceManager.GetString("Person_Time2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rating is too high..
+        /// </summary>
+        public static string RatingOutOfBoundsError {
+            get {
+                return ResourceManager.GetString("RatingOutOfBoundsError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Too many repetitions..
+        /// </summary>
+        public static string RepCountOutOfBoundsError {
+            get {
+                return ResourceManager.GetString("RepCountOutOfBoundsError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repetition weight is too high..
+        /// </summary>
+        public static string RepWeightOutOfBoundsError {
+            get {
+                return ResourceManager.GetString("RepWeightOutOfBoundsError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Too many sets..
+        /// </summary>
+        public static string SetCountOutOfBoundsError {
+            get {
+                return ResourceManager.GetString("SetCountOutOfBoundsError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Time.
+        /// </summary>
+        public static string Time {
+            get {
+                return ResourceManager.GetString("Time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Video URL is too long..
+        /// </summary>
+        public static string VideoURLLengthError {
+            get {
+                return ResourceManager.GetString("VideoURLLengthError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weight.
+        /// </summary>
+        public static string Weight {
+            get {
+                return ResourceManager.GetString("Weight", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Weight is out of bounds..
+        /// </summary>
+        public static string WeightOutOfBoundsError {
+            get {
+                return ResourceManager.GetString("WeightOutOfBoundsError", resourceCulture);
             }
         }
     }

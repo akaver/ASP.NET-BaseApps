@@ -9,5 +9,7 @@ namespace DAL.Interfaces
 {
     public interface IExerciseRepository : IEFRepository<Exercise>
     {
+        List<Exercise> GetAllWithFilter(string filter, string sortProperty, int pageNumber, int pageSize,
+            out int totalExerciseCount, out string realSortProperty);
     }
 }
