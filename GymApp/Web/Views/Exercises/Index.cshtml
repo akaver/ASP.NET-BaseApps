@@ -1,0 +1,69 @@
+﻿@model Web.ViewModels.ExerciseIndexViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Exercises.FirstOrDefault().ExerciseType.ExerciseTypeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Exercises.FirstOrDefault().ExerciseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Exercises.FirstOrDefault().Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Exercises.FirstOrDefault().Instructions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Exercises.FirstOrDefault().VideoUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Exercises.FirstOrDefault().Rating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Exercises.FirstOrDefault().DateCreated)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.Exercises) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExerciseType.ExerciseTypeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExerciseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Instructions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VideoUrl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rating)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateCreated)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ExerciseId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ExerciseId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ExerciseId })
+        </td>
+    </tr>
+}
+
+</table>
