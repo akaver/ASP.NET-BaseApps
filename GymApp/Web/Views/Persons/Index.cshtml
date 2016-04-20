@@ -1,0 +1,94 @@
+﻿@using PagedList.Mvc
+@model Web.ViewModels.PersonIndexViewModel
+
+@{
+    ViewBag.Title = "Index";
+
+    //Move them to some html helper class?
+    // https://msdn.microsoft.com/en-us/library/bb549151(v=vs.110).aspx
+    Func<string, string, string> getSortProperty = (propertyName, currentSortProperty) => currentSortProperty == propertyName ? "_" + propertyName : propertyName;
+
+    Func<string, string, string> getSortIcon = (propertyName, currentSortProperty) => currentSortProperty == propertyName ? "fa-sort-up" : currentSortProperty == "_" + propertyName ? "fa-sort-down" : "fa-sort";
+}
+
+<h2>Index</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        @using (Html.BeginForm("Index", "Persons", FormMethod.Get))
+        {
+            @Html.HiddenFor(model => model.SortProperty)
+            <div class="form-horizontal">
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Filter, new {@class = "control-label col-md-1"})
+                    <div class="col-md-3">
+                        @Html.EditorFor(model => model.Filter, new {htmlAttributes = new {@class = "form-control"}})
+                    </div>
+                    <div class="col-md-2">
+                        <input type="submit" value="Filter" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        }
+        @Html.PagedListPager(Model.Persons, page => Url.Action("Index", new { PageNumber = page }))
+        <p>
+            Total: @Model.Persons.TotalItemCount
+        </p>
+    </div>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            <a href="@Url.Action("Index", new {SortProperty = getSortProperty("firstname", Model.SortProperty),  Model.Filter})">
+                @Html.DisplayNameFor(model => model.Persons.FirstOrDefault().FirstName)
+                <i class="fa @getSortIcon("firstname", Model.SortProperty)"></i>
+            </a>
+        </th>
+        <th>
+            <a href="@Url.Action("Index", new {SortProperty = getSortProperty("lastname", Model.SortProperty),  Model.Filter})">
+                @Html.DisplayNameFor(model => model.Persons.FirstOrDefault().LastName)
+                <i class="fa @getSortIcon("lastname", Model.SortProperty)"></i>
+            </a>
+        </th>
+        <th>@Html.DisplayNameFor(model => model.Persons.FirstOrDefault().DateTime)</th>
+        <th>@Html.DisplayNameFor(model => model.Persons.FirstOrDefault().Date)</th>
+        <th>@Html.DisplayNameFor(model => model.Persons.FirstOrDefault().Time)</th>
+        <th>@Html.DisplayNameFor(model => model.Persons.FirstOrDefault().Contacts)</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Persons)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time)
+            </td>
+            <td>
+                @item.Contacts.Count
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.PersonId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.PersonId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.PersonId })
+            </td>
+        </tr>
+    }
+
+</table>
+@Html.PagedListPager(Model.Persons, page => Url.Action("Index", new { PageNumber = page }))
