@@ -18,6 +18,7 @@ namespace DAL.Interfaces
 
         Person GetForUser(int personId, int userId);
 
-        List<Person> GetAllForUser(int userId, string filter, string sortPropery, int pageNumber, int pageSize, out int totalUserCount, out string realSortPropery);
+        List<Person> GetAllForUser(int userId, string filter, string sortProperty, int pageNumber, int pageSize, out int totalUserCount, out string realSortProperty);
+        List<Person> GetAllForUser(int userId, string filter, DateTime? filterFromDT, DateTime? filterToDt, string sortProperty, int pageNumber, int pageSize, out int totalUserCount, out string realSortProperty);
     }
 }

@@ -1,4 +1,5 @@
-﻿@using PagedList.Mvc
+﻿@using HtmlHelpers
+@using PagedList.Mvc
 @model Web.ViewModels.PersonIndexViewModel
 
 @{
@@ -19,19 +20,24 @@
         <p>
             @Html.ActionLink("Create New", "Create")
         </p>
-        @using (Html.BeginForm("Index", "Persons", FormMethod.Get))
+        @using (Html.BeginForm("Index", "Persons", FormMethod.Get, new { id = "dateTimeForm" }))
         {
             @Html.HiddenFor(model => model.SortProperty)
             <div class="form-horizontal">
                 <div class="form-group">
-                    @Html.LabelFor(model => model.Filter, new {@class = "control-label col-md-1"})
+                    @Html.LabelFor(model => model.Filter, new { @class = "control-label col-md-1" })
                     <div class="col-md-3">
-                        @Html.EditorFor(model => model.Filter, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.EditorFor(model => model.Filter, new { htmlAttributes = new { @class = "form-control" } })
                     </div>
                     <div class="col-md-2">
                         <input type="submit" value="Filter" class="btn btn-default" />
                     </div>
                 </div>
+                @*<div class="form-group">
+                    @Html.EditorFor(model => model.FilterByDTBoolean, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.DateTimeEditorFor(model => model.FilterFromDT, new { @class = "form-control" })
+                    @Html.DateTimeEditorFor(model => model.FilterToDT, new { @class = "form-control" })
+                </div>*@
             </div>
         }
         @Html.PagedListPager(Model.Persons, page => Url.Action("Index", new { PageNumber = page, filter = Model.Filter }))
@@ -93,3 +99,27 @@
 
 </table>
 @Html.PagedListPager(Model.Persons, page => Url.Action("Index", new { PageNumber = page }))
+
+@section scripts {
+    <script type="text/javascript">
+        $("#dateTimeForm").submit(function(event) {
+            $("input[data-val-datetime]").each(function(index, element) {
+                var currentValue = $(this).val();
+                
+                for (var i = 0; i < $.validator.methods.datetimeGlobalizeOptions.dateParseFormat.length; i++) {
+                    var dateObject = Globalize.parseDate(currentValue, $.validator.methods.datetimeGlobalizeOptions.dateParseFormat[i]);
+                    if (dateObject instanceof Date) {
+                        $(this).removeAttr("data-val");
+                        console.log(dateObject.toISOString());
+                        $(this).val(dateObject.toISOString());
+                        break;
+                    }
+                }
+            });
+
+            //submit form here, avoid futher validation
+            this.submit();
+            return false;
+        });
+    </script>
+}

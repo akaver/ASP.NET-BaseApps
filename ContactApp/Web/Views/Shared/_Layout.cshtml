@@ -44,12 +44,12 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("ApiDemo", "ApiDemo", "Home", new { area = "" }, null)</li>
                     @if (Request.IsAuthenticated)
                     {
                         <li>@Html.ActionLink("Persons", "Index", "Persons", new { area = "" }, null)</li>
                         <li>@Html.ActionLink("Contacts", "Index", "Contacts", new { area = "" }, null)</li>
                     }
-                    @*<li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>*@
                     @*<li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>*@
                     @if (Request.IsAuthenticated && User.IsInRole("Admin"))
                     {

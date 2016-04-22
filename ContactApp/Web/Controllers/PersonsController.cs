@@ -36,7 +36,21 @@ namespace Web.Controllers
             vm.PageNumber = vm.PageNumber ?? 1;
             vm.PageSize = vm.PageSize ?? 25;
 
-            var res = _uow.Persons.GetAllForUser(User.Identity.GetUserId<int>(), vm.Filter, vm.SortProperty, vm.PageNumber.Value-1, vm.PageSize.Value, out totalUserCount, out realSortProperty);
+            List<Person> res;
+            if (vm.FilterByDTBoolean)
+            {
+                res = _uow.Persons.GetAllForUser(User.Identity.GetUserId<int>(), vm.Filter, vm.FilterFromDT,
+                    vm.FilterToDT, vm.SortProperty, vm.PageNumber.Value - 1, vm.PageSize.Value, out totalUserCount,
+                    out realSortProperty);
+            }
+            else
+            {
+                res = _uow.Persons.GetAllForUser(User.Identity.GetUserId<int>(), vm.Filter, vm.SortProperty,
+                    vm.PageNumber.Value - 1, vm.PageSize.Value, out totalUserCount, out realSortProperty);
+
+                vm.FilterFromDT = vm.FilterFromDT ?? DateTime.Now.Subtract(TimeSpan.FromDays(5 * 365));
+                vm.FilterToDT = vm.FilterToDT ?? DateTime.Now;
+            }
 
             vm.SortProperty = realSortProperty;
 

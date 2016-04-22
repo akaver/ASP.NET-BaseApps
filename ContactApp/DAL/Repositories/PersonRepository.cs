@@ -27,6 +27,12 @@ namespace DAL.Repositories
 
         public List<Person> GetAllForUser(int userId, string filter, string sortProperty, int pageNumber, int pageSize, out int totalUserCount, out string realSortProperty)
         {
+            return GetAllForUser( userId,  filter,  null,  null, sortProperty, pageNumber,  pageSize, out  totalUserCount, out realSortProperty);
+        }
+
+        public List<Person> GetAllForUser(int userId, string filter, DateTime? filterFromDT, DateTime? filterToDt, string sortProperty,
+            int pageNumber, int pageSize, out int totalUserCount, out string realSortProperty)
+        {
             sortProperty = sortProperty?.ToLower() ?? "";
             realSortProperty = sortProperty;
             filter = filter?.ToLower() ?? "";
@@ -40,6 +46,11 @@ namespace DAL.Repositories
             if (!string.IsNullOrWhiteSpace(filter))
             {
                 res = res.Where(p => p.Firstname.ToLower().Contains(filter) || p.Lastname.ToLower().Contains(filter));
+            }
+
+            if (filterFromDT != null && filterToDt != null)
+            {
+                res = res.Where(p => p.DateTime2 >= filterFromDT.Value && p.DateTime2 <= filterToDt.Value);
             }
 
             // set up sorting
@@ -81,7 +92,5 @@ namespace DAL.Repositories
 
             return reslist;
         }
-
-        
     }
 }
