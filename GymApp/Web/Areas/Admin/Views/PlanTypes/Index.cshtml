@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Domain.PlanType>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PlanTypeDescription.Value)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PlanTypeName.Value)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedAtDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifiedAtDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifiedBy)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlanTypeDescription.Value)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PlanTypeName.Value)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedAtDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifiedAtDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifiedBy)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PlanTypeId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PlanTypeId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PlanTypeId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -67,7 +67,7 @@ namespace DAL
         public IDbSet<PlanType> PlanTypes { get; set; }
         public IDbSet<Workout> Workouts { get; set; }
         public IDbSet<PersonInPlan> PeopleInPlans { get; set; }
-        public IDbSet<PersonRoleInPlan> PersonRolesInPlans { get; set; }
+        public IDbSet<PersonRoleInPlan> PersonRoleInPlans { get; set; }
 
         public IDbSet<Article> Articles { get; set; }
         public IDbSet<MultiLangString> MultiLangStrings { get; set; }
@@ -166,5 +166,6 @@ namespace DAL
             base.Dispose(disposing);
         }
 
+        //public System.Data.Entity.DbSet<Domain.PersonRoleInPlan> PersonRoleInPlans { get; set; }
     }
 }

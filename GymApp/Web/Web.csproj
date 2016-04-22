@@ -227,8 +227,11 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\ArticlesController.cs" />
     <Compile Include="Areas\Admin\Controllers\ContactTypesController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ExerciseTypesController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\MultiLangStringsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PersonRolesInPlansController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PlanTypesController.cs" />
     <Compile Include="Areas\Admin\Controllers\RolesController.cs" />
     <Compile Include="Areas\Admin\Controllers\SystemLogController.cs" />
     <Compile Include="Areas\Admin\Controllers\TranslationsController.cs" />
@@ -238,6 +241,9 @@
     <Compile Include="Areas\Admin\Controllers\UsersController.cs" />
     <Compile Include="Areas\Admin\ViewModels\ArticleViewModels.cs" />
     <Compile Include="Areas\Admin\ViewModels\ContactTypeViewModels.cs" />
+    <Compile Include="Areas\Admin\ViewModels\ExerciseTypeViewModels.cs" />
+    <Compile Include="Areas\Admin\ViewModels\PersonRoleInPlanViewModels.cs" />
+    <Compile Include="Areas\Admin\ViewModels\PlanTypeViewModels.cs" />
     <Compile Include="Areas\Admin\ViewModels\SystemLogViewModels.cs" />
     <Compile Include="Areas\Admin\ViewModels\TranslationsViewModels.cs" />
     <Compile Include="Areas\Admin\ViewModels\UserRoleViewModels.cs" />
@@ -2040,6 +2046,22 @@
     <Content Include="Content\font-awesome-4.6.1\scss\_screen-reader.scss" />
     <Content Include="Content\font-awesome-4.6.1\scss\_stacked.scss" />
     <Content Include="Content\font-awesome-4.6.1\scss\_variables.scss" />
+    <Content Include="Areas\Admin\Views\ExerciseTypes\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\ExerciseTypes\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\ExerciseTypes\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\ExerciseTypes\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ExerciseTypes\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\PersonRoleInPlans\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\PersonRoleInPlans\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\PersonRoleInPlans\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\PersonRoleInPlans\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\PersonRoleInPlans\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\PlanTypes\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\PlanTypes\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\PlanTypes\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\PlanTypes\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\PlanTypes\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ExerciseTypes\_CreateEdit.cshtml" />
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
