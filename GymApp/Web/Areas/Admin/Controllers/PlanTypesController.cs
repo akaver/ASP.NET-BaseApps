@@ -14,6 +14,7 @@ using Web.Helpers;
 
 namespace Web.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class PlanTypesController : Controller
     {
         //private DataBaseContext db = new DataBaseContext();

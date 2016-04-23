@@ -15,6 +15,7 @@ using Web.Helpers;
 
 namespace Web.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class ExerciseTypesController : BaseController
     {
         //private DataBaseContext db = new DataBaseContext();

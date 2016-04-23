@@ -56,7 +56,10 @@
                         <li class="dropdown">
                             <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li>@Html.ActionLink("Contact Types", "Index", new { area = "Admin", controller = "ContactTypes" })</li>
+                                <li>@Html.ActionLink("Contact types", "Index", new {area = "Admin", controller = "ContactTypes"})</li>
+                                <li>@Html.ActionLink("Exercise types", "Index", new {area = "Admin", controller = "ExerciseTypes"})</li>
+                                <li>@Html.ActionLink("Plan types", "Index", new {area = "Admin", controller = "PlanTypes"})</li>
+                                <li>@Html.ActionLink("Person roles in plans", "Index", new { area = "Admin", controller = "PersonRoleInPlans" })</li>
                                 <li>@Html.ActionLink("Articles", "Index", new { area = "Admin", controller = "Articles" })</li>
                                 <li class="divider"></li>
                                 <li>@Html.ActionLink("MultiLangStrings", "Index", new { area = "Admin", controller = "MultiLangStrings" })</li>

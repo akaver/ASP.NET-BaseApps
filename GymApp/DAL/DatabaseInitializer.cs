@@ -22,6 +22,7 @@ namespace DAL
             SeedIdentity(context);
             SeedArticles(context);
             SeedContacts(context);
+            SeedExerciseTypes(context);
 
 
             // restore state
@@ -204,6 +205,283 @@ namespace DAL
             });
 
             context.SaveChanges();
+        }
+
+        private void SeedExerciseTypes(DataBaseContext context)
+        {
+            var exerciseType1 = new ExerciseType()
+            {
+                ExerciseTypeName = new MultiLangString("Quadriceps", "en", "Quadriceps", "ExerciseType.Name"),
+                ExerciseTypeDescription = new MultiLangString("Quadriceps training exercise.", "en", "Quadriceps training exercise.", "ExerciseType.Description")
+            };
+
+            context.ExerciseTypes.Add(exerciseType1);
+            context.SaveChanges();
+
+            context.Translations.Add(new Translation()
+            {
+                Value = "Reie-nelipealihas",
+                Culture = "et",
+                MultiLangString = exerciseType1.ExerciseTypeName
+            });
+
+            context.Translations.Add(new Translation()
+            {
+                Value = "Reie-nelipealihase treenimise harjutus",
+                Culture = "et",
+                MultiLangString = exerciseType1.ExerciseTypeDescription
+            });
+            context.SaveChanges();
+
+            var exerciseType2 = new ExerciseType()
+            {
+                ExerciseTypeName = new MultiLangString("Hamstrings", "en", "Hamstrings", "ExerciseType.Name"),
+                ExerciseTypeDescription = new MultiLangString("Hamstrings training exercise.", "en", "Hamstrings training exercise.", "ExerciseType.Description")
+            };
+
+            context.ExerciseTypes.Add(exerciseType2);
+            context.SaveChanges();
+
+            context.Translations.Add(new Translation()
+            {
+                Value = "Reie tagaosa",
+                Culture = "et",
+                MultiLangString = exerciseType2.ExerciseTypeName
+            });
+
+            context.Translations.Add(new Translation()
+            {
+                Value = "Reie tagaosa treenimise harjutus",
+                Culture = "et",
+                MultiLangString = exerciseType2.ExerciseTypeDescription
+            });
+            context.SaveChanges();
+
+            var exerciseType3 = new ExerciseType()
+            {
+                ExerciseTypeName = new MultiLangString("Calves", "en", "Calves", "ExerciseType.Name"),
+                ExerciseTypeDescription = new MultiLangString("Calves training exercise.", "en", "Calves training exercise.", "ExerciseType.Description")
+            };
+
+            context.ExerciseTypes.Add(exerciseType3);
+            context.SaveChanges();
+
+            context.Translations.Add(new Translation()
+            {
+                Value = "Sääred",
+                Culture = "et",
+                MultiLangString = exerciseType3.ExerciseTypeName
+            });
+
+            context.Translations.Add(new Translation()
+            {
+                Value = "Säärte treenimise harjutus",
+                Culture = "et",
+                MultiLangString = exerciseType3.ExerciseTypeDescription
+            });
+            context.SaveChanges();
+
+
+            var exerciseType4 = new ExerciseType()
+            {
+                ExerciseTypeName = new MultiLangString("Hips", "en", "Hips", "ExerciseType.Name"),
+                ExerciseTypeDescription = new MultiLangString("Hips training exercise.", "en", "Hips training exercise.", "ExerciseType.Description")
+            };
+
+            context.ExerciseTypes.Add(exerciseType4);
+            context.SaveChanges();
+
+            context.Translations.Add(new Translation()
+            {
+                Value = "Puusad",
+                Culture = "et",
+                MultiLangString = exerciseType4.ExerciseTypeName
+            });
+
+            context.Translations.Add(new Translation()
+            {
+                Value = "Puusade treenimise harjutus",
+                Culture = "et",
+                MultiLangString = exerciseType4.ExerciseTypeDescription
+            });
+            context.SaveChanges();
+
+
+            var exerciseType5 = new ExerciseType()
+            {
+                ExerciseTypeName = new MultiLangString("Pectorals", "en", "Pectorals", "ExerciseType.Name"),
+                ExerciseTypeDescription = new MultiLangString("Pectorals training exercise.", "en", "Pectorals training exercise.", "ExerciseType.Description")
+            };
+
+            context.ExerciseTypes.Add(exerciseType5);
+            context.SaveChanges();
+
+            context.Translations.Add(new Translation()
+            {
+                Value = "Rinnalihas",
+                Culture = "et",
+                MultiLangString = exerciseType5.ExerciseTypeName
+            });
+
+            context.Translations.Add(new Translation()
+            {
+                Value = "Rinnalihaste treenimise harjutus",
+                Culture = "et",
+                MultiLangString = exerciseType5.ExerciseTypeDescription
+            });
+            context.SaveChanges();
+
+
+            var exerciseType6 = new ExerciseType()
+            {
+                ExerciseTypeName = new MultiLangString("Lats", "en", "Lats", "ExerciseType.Name"),
+                ExerciseTypeDescription = new MultiLangString("Lats training exercise.", "en", "Lats training exercise.", "ExerciseType.Description")
+            };
+
+            context.ExerciseTypes.Add(exerciseType6);
+            context.SaveChanges();
+
+            context.Translations.Add(new Translation()
+            {
+                Value = "Seljalihas",
+                Culture = "et",
+                MultiLangString = exerciseType6.ExerciseTypeName
+            });
+
+            context.Translations.Add(new Translation()
+            {
+                Value = "Selja lailihase treenimise harjutus",
+                Culture = "et",
+                MultiLangString = exerciseType6.ExerciseTypeDescription
+            });
+            context.SaveChanges();
+
+
+            var exerciseType7 = new ExerciseType()
+            {
+                ExerciseTypeName = new MultiLangString("Deltoids", "en", "Deltoids", "ExerciseType.Name"),
+                ExerciseTypeDescription = new MultiLangString("Deltoids training exercise.", "en", "Deltoids training exercise.", "ExerciseType.Description")
+            };
+
+            context.ExerciseTypes.Add(exerciseType7);
+            context.SaveChanges();
+
+            context.Translations.Add(new Translation()
+            {
+                Value = "Deltalihas",
+                Culture = "et",
+                MultiLangString = exerciseType7.ExerciseTypeName
+            });
+
+            context.Translations.Add(new Translation()
+            {
+                Value = "Deltalihase treenimise harjutus",
+                Culture = "et",
+                MultiLangString = exerciseType7.ExerciseTypeDescription
+            });
+            context.SaveChanges();
+
+
+            var exerciseType8 = new ExerciseType()
+            {
+                ExerciseTypeName = new MultiLangString("Triceps", "en", "Triceps", "ExerciseType.Name"),
+                ExerciseTypeDescription = new MultiLangString("Triceps training exercise.", "en", "Triceps training exercise.", "ExerciseType.Description")
+            };
+
+            context.ExerciseTypes.Add(exerciseType8);
+            context.SaveChanges();
+
+            context.Translations.Add(new Translation()
+            {
+                Value = "Triitseps",
+                Culture = "et",
+                MultiLangString = exerciseType8.ExerciseTypeName
+            });
+
+            context.Translations.Add(new Translation()
+            {
+                Value = "Triitsepsi treenimise harjutus",
+                Culture = "et",
+                MultiLangString = exerciseType8.ExerciseTypeDescription
+            });
+            context.SaveChanges();
+
+
+            var exerciseType9 = new ExerciseType()
+            {
+                ExerciseTypeName = new MultiLangString("Biceps", "en", "Biceps", "ExerciseType.Name"),
+                ExerciseTypeDescription = new MultiLangString("Biceps training exercise.", "en", "Biceps training exercise.", "ExerciseType.Description")
+            };
+
+            context.ExerciseTypes.Add(exerciseType9);
+            context.SaveChanges();
+
+            context.Translations.Add(new Translation()
+            {
+                Value = "Biitseps",
+                Culture = "et",
+                MultiLangString = exerciseType9.ExerciseTypeName
+            });
+
+            context.Translations.Add(new Translation()
+            {
+                Value = "Biitsepsi treenimise harjutus",
+                Culture = "et",
+                MultiLangString = exerciseType9.ExerciseTypeDescription
+            });
+            context.SaveChanges();
+
+
+            var exerciseType10 = new ExerciseType()
+            {
+                ExerciseTypeName = new MultiLangString("Abdominals", "en", "Abdominals", "ExerciseType.Name"),
+                ExerciseTypeDescription = new MultiLangString("Abdominals training exercise.", "en", "Abdominals training exercise.", "ExerciseType.Description")
+            };
+
+            context.ExerciseTypes.Add(exerciseType10);
+            context.SaveChanges();
+
+            context.Translations.Add(new Translation()
+            {
+                Value = "Kõhulihased",
+                Culture = "et",
+                MultiLangString = exerciseType10.ExerciseTypeName
+            });
+
+            context.Translations.Add(new Translation()
+            {
+                Value = "Kõhulihaste treenimise harjutus",
+                Culture = "et",
+                MultiLangString = exerciseType10.ExerciseTypeDescription
+            });
+            context.SaveChanges();
+
+
+            var exerciseType11 = new ExerciseType()
+            {
+                ExerciseTypeName = new MultiLangString("Lower back", "en", "Lower back", "ExerciseType.Name"),
+                ExerciseTypeDescription = new MultiLangString("Lower back training exercise.", "en", "Lower back training exercise.", "ExerciseType.Description")
+            };
+
+            context.ExerciseTypes.Add(exerciseType11);
+            context.SaveChanges();
+
+            context.Translations.Add(new Translation()
+            {
+                Value = "Alaselg",
+                Culture = "et",
+                MultiLangString = exerciseType11.ExerciseTypeName
+            });
+
+            context.Translations.Add(new Translation()
+            {
+                Value = "Alaselja treenimise harjutus",
+                Culture = "et",
+                MultiLangString = exerciseType11.ExerciseTypeDescription
+            });
+            context.SaveChanges();
+
+
         }
     }
 }

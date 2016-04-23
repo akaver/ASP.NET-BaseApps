@@ -15,6 +15,7 @@ using Web.Helpers;
 
 namespace Web.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class PersonRoleInPlansController : BaseController
     {
         //private DataBaseContext db = new DataBaseContext();
