@@ -49,13 +49,26 @@ namespace Web
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/bower_components/bootstrap/dist/css/bootstrap.css",
                 "~/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css",
-                "~/Content/font-awesome-4.6.1/css/font-awesome.css",
-                "~/Content/site.css"));
+                "~/Content/font-awesome-4.6.1/css/font-awesome.css"
+                // "~/Content/site.css"
+                ));
+
+
 
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                    "~/Scripts/app/app.js"));
 
-            BundleTable.EnableOptimizations = true;
+
+            // AdminLTE stylebundle
+            bundles.Add(new StyleBundle("~/Content/adminltecss").Include(
+                "~/Content/AdminLTE.css",
+                "~/Content/skins/_all-skins.min.css"
+                ));
+
+            bundles.Add(new ScriptBundle("~/bundles/adminltejs").Include(
+                "~/Scripts/AdminLTE/app.js"));
+
+            BundleTable.EnableOptimizations = false;
         }
     }
 }
