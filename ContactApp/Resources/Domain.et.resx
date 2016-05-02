@@ -150,4 +150,7 @@
   <data name="Person_Time2" xml:space="preserve">
     <value>Kellaaeg</value>
   </data>
+  <data name="SelectOptionLabel" xml:space="preserve">
+    <value>--- Vali! ---</value>
+  </data>
 </root>

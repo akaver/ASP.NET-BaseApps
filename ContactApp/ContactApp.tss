@@ -2,13 +2,37 @@
 <ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ArrayOfArrayOfString>
     <ArrayOfString>
-      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Filters\RequireHttpsAttribute.cs</string>
+      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\controllers\api\valuescontroller.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Controllers\ValuesController.cs</string>
+      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\controllers\api\accountcontroller.cs</string>
     </ArrayOfString>
     <ArrayOfString>
-      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Views\Home\ApiDemo.cshtml</string>
+      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\views\shared\_layout.cshtml</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\controllers\homecontroller.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\views\home\apidemo.cshtml</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\controllers\personscontroller.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Views\HelperDemo\Index.cshtml</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\controllers\helperdemocontroller.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\app_start\bundleconfig.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\views\persons\index.cshtml</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\ViewModels\HelperDemoViewModels.cs</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

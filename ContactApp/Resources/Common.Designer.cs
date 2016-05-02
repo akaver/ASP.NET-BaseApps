@@ -196,6 +196,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to --- Select! ---.
+        /// </summary>
+        public static string SelectOptionLabel {
+            get {
+                return ResourceManager.GetString("SelectOptionLabel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Submit.
         /// </summary>
         public static string Submit {

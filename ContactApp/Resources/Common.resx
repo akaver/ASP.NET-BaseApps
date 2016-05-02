@@ -165,4 +165,7 @@
   <data name="FieldMustBeDataTypeTime" xml:space="preserve">
     <value>The field {0} must be a time.</value>
   </data>
+  <data name="SelectOptionLabel" xml:space="preserve">
+    <value>--- Select! ---</value>
+  </data>
 </root>

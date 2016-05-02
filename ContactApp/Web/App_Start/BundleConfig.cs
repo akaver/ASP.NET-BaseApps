@@ -55,7 +55,7 @@ namespace Web
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                    "~/Scripts/app/app.js"));
 
-            BundleTable.EnableOptimizations = false;
+            BundleTable.EnableOptimizations = true;
         }
     }
 }
