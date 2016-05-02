@@ -37,6 +37,12 @@ namespace Web.ViewModels
         public int[] ListBoxId { get; set; }
         public MultiSelectList ListBoxList { get; set; }
 
+        public int RadioButtonId1 { get; set; }
+        public List<Person> RadioButtonList1 { get; set; }
+
+        public int RadioButtonId2 { get; set; }
+        public List<Person> RadioButtonList2 { get; set; }
+
 
     }
 }
