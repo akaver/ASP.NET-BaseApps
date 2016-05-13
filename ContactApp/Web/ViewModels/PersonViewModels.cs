@@ -3,11 +3,21 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 using Domain;
 using PagedList;
 
 namespace Web.ViewModels
 {
+
+    public class PersonCreateComplexViewModel
+    {
+        public Person Person { get; set; }
+        public Contact Contact { get; set; }
+
+        public SelectList ContactTypeSelectList { get; set; }
+    }
+
     public class PersonIndexViewModel
     {
         public IPagedList<Person> Persons { get; set; }

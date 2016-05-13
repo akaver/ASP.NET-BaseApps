@@ -49,7 +49,7 @@ namespace Web
                     // This is a security feature which is used when you change a password or add an external login to your account.  
                     OnValidateIdentity =
                         SecurityStampValidator.OnValidateIdentity<ApplicationUserManager, UserInt, int>(
-                            validateInterval: TimeSpan.FromMinutes(30),
+                            validateInterval: TimeSpan.FromMinutes(5),
                             regenerateIdentityCallback: (manager, user) =>
                                 user.GenerateUserIdentityAsync(manager),
                             // delete old cookies from browser first, otherwise youll get string conversion error

@@ -76,8 +76,37 @@ namespace Web.Controllers
             return View(person);
         }
 
+        public ActionResult CreateComplex()
+        {
+            var vm = new PersonCreateComplexViewModel
+            {
+                ContactTypeSelectList = new SelectList(_uow.ContactTypes.All,nameof(ContactType.ContactTypeId), nameof(ContactType.ContactTypeName))
+            };
+            return View(vm);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateComplex(PersonCreateComplexViewModel vm)
+        {
+            if (ModelState.IsValid)
+            {
+                vm.Person.UserId = User.Identity.GetUserId<int>();
+//                _uow.Contacts.Add(vm.Contact);
+                vm.Person.Contacts.Add(vm.Contact);
+
+                _uow.Persons.Add(vm.Person);
+                _uow.Commit();
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(vm);
+        }
+
         // GET: Persons/Create
-        public ActionResult Create()
+            public
+            ActionResult Create()
         {
             return View();
         }
