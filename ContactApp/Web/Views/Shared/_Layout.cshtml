@@ -25,7 +25,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>@titleTag</title>
     @Styles.Render("~/Content/css")
-    @Styles.Render("~/Content/adminltecss")
+    @Styles.Render("~/Content/sitecss")
     @Scripts.Render("~/bundles/modernizr")
     <script type="text/javascript">
         var currentCultureCode = '@currentCultureCode';
@@ -47,6 +47,7 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("ApiDemo", "ApiDemo", "Home", new { area = "" }, null)</li>
                     <li>@Html.ActionLink("HelperDemo", "Index", "HelperDemo", new { area = "" }, null)</li>
+                    <li>@Html.ActionLink("Files", "Index", "FDemo", new { area = "" }, null)</li>
                     @if (Request.IsAuthenticated)
                     {
                         <li>@Html.ActionLink("Persons", "Index", "Persons", new { area = "" }, null)</li>
@@ -108,10 +109,6 @@
     @Scripts.Render("~/bundles/moment")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/Scripts/tinymce/tinymce.min.js")
-
-
-
-    @Scripts.Render("~/bundles/adminltejs")
 
 
     @Scripts.Render("~/bundles/app")

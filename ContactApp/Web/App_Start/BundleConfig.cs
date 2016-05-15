@@ -50,7 +50,6 @@ namespace Web
                 "~/bower_components/bootstrap/dist/css/bootstrap.css",
                 "~/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css",
                 "~/Content/font-awesome-4.6.1/css/font-awesome.css"
-                // "~/Content/site.css"
                 ));
 
 
@@ -63,6 +62,11 @@ namespace Web
             bundles.Add(new StyleBundle("~/Content/adminltecss").Include(
                 "~/Content/AdminLTE.css",
                 "~/Content/skins/_all-skins.min.css"
+                ));
+
+            // Default template stylebundle
+            bundles.Add(new StyleBundle("~/Content/sitecss").Include(
+                "~/Content/site.css"
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/adminltejs").Include(

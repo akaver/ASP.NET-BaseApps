@@ -18,6 +18,17 @@ namespace Web.ViewModels
         public SelectList ContactTypeSelectList { get; set; }
     }
 
+    public class PersonCreateComplex2ViewModel
+    {
+        public Person Person { get; set; }
+
+        // not really used, just helps with validation
+        public Contact DummyContact { get; set; }
+
+        public Contact[] Contacts { get; set; }
+
+        public SelectList ContactTypeSelectList { get; set; }
+    }
     public class PersonIndexViewModel
     {
         public IPagedList<Person> Persons { get; set; }

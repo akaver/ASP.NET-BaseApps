@@ -282,6 +282,7 @@
     <Compile Include="Controllers\ArticleController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\ContactsController.cs" />
+    <Compile Include="Controllers\FDemoController.cs" />
     <Compile Include="Controllers\HelperDemoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LanguageController.cs" />
@@ -2382,9 +2383,14 @@
     <Content Include="Views\HelperDemo\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Persons\CreateComplex.cshtml" />
+    <Content Include="Views\Persons\CreateComplex2.cshtml" />
+    <Content Include="Views\FDemo\Index.cshtml" />
+    <Content Include="Views\FDemo\DeleteFile.cshtml" />
+    <Content Include="Views\FDemo\UploadFiles.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Content\Uploads\" />
     <Folder Include="logs\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
