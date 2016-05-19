@@ -44,6 +44,10 @@ namespace DAL.Helpers
                 //{typeof(IUserClaimRepository), dbContext => new UserClaimRepository(dbContext)},
                 //{typeof(IUserLoginRepository), dbContext => new UserLoginRepository(dbContext)},
                 //{typeof(IRoleRepository), dbContext => new RoleRepository(dbContext)},
+                {typeof (IContactTypeRepository), dbContext => new ContactTypeRepository(dbContext)},
+                {typeof (IMultiLangStringRepository), dbContext => new MultiLangStringRepository(dbContext)},
+                {typeof (ITranslationRepository), dbContext => new TranslationRepsoitory(dbContext)},
+
                 {typeof (IPersonRepository), dbContext => new PersonRepository(dbContext)},
                 {typeof (IContactRepository), dbContext => new ContactRepository(dbContext)},
                 {typeof (IArticleRepository), dbContext => new ArticleRepository(dbContext)},

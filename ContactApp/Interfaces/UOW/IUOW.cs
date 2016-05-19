@@ -7,7 +7,7 @@ namespace Interfaces.UOW
     {
         //save pending changes to the data store
         void Commit();
-        void RefreshAllEntities();
+        //void RefreshAllEntities();
 
         //UOW Methods, that dont fit into specific repo
 
@@ -15,9 +15,9 @@ namespace Interfaces.UOW
         T GetRepository<T>() where T : class;
 
         // standard autocreated repos, since we do not have any special methods in interfaces
-        IBaseRepository<ContactType> ContactTypes { get; }
-        IBaseRepository<MultiLangString> MultiLangStrings { get; }
-        IBaseRepository<Translation> Translations { get; }
+        IContactTypeRepository ContactTypes { get; }
+        IMultiLangStringRepository MultiLangStrings { get; }
+        ITranslationRepository Translations { get; }
 
 
         IPersonRepository Persons { get; }

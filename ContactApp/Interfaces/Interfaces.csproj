@@ -47,8 +47,11 @@
     <Compile Include="Repositories\IArticleRepository.cs" />
     <Compile Include="Repositories\IContactRepository.cs" />
     <Compile Include="Repositories\IBaseRepository.cs" />
+    <Compile Include="Repositories\IContactTypeRepository.cs" />
+    <Compile Include="Repositories\IMultiLangStringRepository.cs" />
     <Compile Include="Repositories\IPersonRepository.cs" />
     <Compile Include="Repositories\IRoleRepository.cs" />
+    <Compile Include="Repositories\ITranslationRepository.cs" />
     <Compile Include="Repositories\IUserClaimRepository.cs" />
     <Compile Include="Repositories\IUserLoginRepository.cs" />
     <Compile Include="IUserNameResolver.cs" />

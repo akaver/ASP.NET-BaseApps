@@ -46,9 +46,9 @@ namespace DAL
         }
 
         //standard repos
-        public IBaseRepository<ContactType> ContactTypes => GetStandardRepo<ContactType>();
-        public IBaseRepository<MultiLangString> MultiLangStrings => GetStandardRepo<MultiLangString>();
-        public IBaseRepository<Translation> Translations => GetStandardRepo<Translation>();
+        //public IBaseRepository<ContactType> ContactTypes => GetStandardRepo<ContactType>();
+        //public IBaseRepository<MultiLangString> MultiLangStrings => GetStandardRepo<MultiLangString>();
+        //public IBaseRepository<Translation> Translations => GetStandardRepo<Translation>();
 
         // repo with custom methods
         // add it also in EFRepositoryFactories.cs, in method GetCustomFactories
@@ -58,6 +58,11 @@ namespace DAL
         //public IRoleRepository Roles => GetRepo<IRoleRepository>();
         //public IUserClaimRepository UserClaims => GetRepo<IUserClaimRepository>();
         //public IUserLoginRepository UserLogins => GetRepo<IUserLoginRepository>();
+        public IContactTypeRepository ContactTypes => GetRepo<IContactTypeRepository>();
+
+        public IMultiLangStringRepository MultiLangStrings => GetRepo<IMultiLangStringRepository>();
+        public ITranslationRepository Translations => GetRepo<ITranslationRepository>();
+
         public IPersonRepository Persons => GetRepo<IPersonRepository>();
         public IContactRepository Contacts => GetRepo<IContactRepository>();
         public IArticleRepository Articles => GetRepo<IArticleRepository>();
