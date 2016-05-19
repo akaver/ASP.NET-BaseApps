@@ -2,35 +2,7 @@
 <ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ArrayOfArrayOfString>
     <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\controllers\personscontroller.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\controllers\contactscontroller.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\app_start\bundleconfig.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\views\persons\index.cshtml</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Views\Persons\CreateComplex2.cshtml</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\views\persons\createcomplex.cshtml</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>c:\!dev\git\asp.net-baseapps\contactapp\web\viewmodels\personviewmodels.cs</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Views\Shared\_LoginPartial.cshtml</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Views\Shared\_Layout.almsa.cshtml</string>
-      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Views\Shared\_Layout.cshtml</string>
-    </ArrayOfString>
-    <ArrayOfString>
-      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Controllers\FileDemoController.cs</string>
+      <string>NuGet - Solution</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>
