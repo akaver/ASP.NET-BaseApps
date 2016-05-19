@@ -77,19 +77,8 @@
     <Compile Include="Helpers\EFRepositoryFactories.cs" />
     <Compile Include="Helpers\EFRepositoryProvider.cs" />
     <Compile Include="Helpers\FormattedDbEntityValidationException.cs" />
-    <Compile Include="Interfaces\IArticleRepository.cs" />
-    <Compile Include="Interfaces\IContactRepository.cs" />
     <Compile Include="Interfaces\IDbContext.cs" />
-    <Compile Include="Interfaces\IEFRepository.cs" />
     <Compile Include="Interfaces\IEFRepositoryProvider.cs" />
-    <Compile Include="Interfaces\IPersonRepository.cs" />
-    <Compile Include="Interfaces\IRoleRepository.cs" />
-    <Compile Include="Interfaces\IUOW.cs" />
-    <Compile Include="Interfaces\IUserClaimRepository.cs" />
-    <Compile Include="Interfaces\IUserLoginRepository.cs" />
-    <Compile Include="Interfaces\IUserNameResolver.cs" />
-    <Compile Include="Interfaces\IUserRepository.cs" />
-    <Compile Include="Interfaces\IUserRoleRepository.cs" />
     <Compile Include="NLogCommandInterceptor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ArticleRepository.cs" />
@@ -112,6 +101,10 @@
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{54e9dc6c-c740-4878-b57e-546c09b4e8ca}</Project>
       <Name>Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
+      <Project>{E80E1D6A-8585-4222-9964-715D978FE9EC}</Project>
+      <Name>Interfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\Resources\Resources.csproj">
       <Project>{7308994f-36c4-49c2-8421-215aff278799}</Project>

@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL.Interfaces;
 using Domain;
+using Interfaces.Repositories;
+using Interfaces.UOW;
 using NLog;
 
 namespace DAL
@@ -44,9 +46,9 @@ namespace DAL
         }
 
         //standard repos
-        public IEFRepository<ContactType> ContactTypes => GetStandardRepo<ContactType>();
-        public IEFRepository<MultiLangString> MultiLangStrings => GetStandardRepo<MultiLangString>();
-        public IEFRepository<Translation> Translations => GetStandardRepo<Translation>();
+        public IBaseRepository<ContactType> ContactTypes => GetStandardRepo<ContactType>();
+        public IBaseRepository<MultiLangString> MultiLangStrings => GetStandardRepo<MultiLangString>();
+        public IBaseRepository<Translation> Translations => GetStandardRepo<Translation>();
 
         // repo with custom methods
         // add it also in EFRepositoryFactories.cs, in method GetCustomFactories
@@ -67,7 +69,7 @@ namespace DAL
         public IUserLoginIntRepository UserLoginsInt => GetRepo<IUserLoginIntRepository>();
 
         // calling standard EF repo provider
-        private IEFRepository<T> GetStandardRepo<T>() where T : class
+        private IBaseRepository<T> GetStandardRepo<T>() where T : class
         {
             return RepositoryProvider.GetRepositoryForEntityType<T>();
         }

@@ -5,6 +5,8 @@ using DAL.Helpers;
 using DAL.Interfaces;
 using Domain.Identity;
 using Identity;
+using Interfaces;
+using Interfaces.UOW;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 using Microsoft.Web.Infrastructure.DynamicModuleHelper;

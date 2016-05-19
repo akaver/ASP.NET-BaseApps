@@ -63,6 +63,10 @@
       <Project>{54e9dc6c-c740-4878-b57e-546c09b4e8ca}</Project>
       <Name>Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
+      <Project>{E80E1D6A-8585-4222-9964-715D978FE9EC}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

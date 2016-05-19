@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL.Interfaces;
 using Domain.Identity;
+using Interfaces.Repositories;
 using Microsoft.AspNet.Identity;
 
 namespace DAL.Repositories

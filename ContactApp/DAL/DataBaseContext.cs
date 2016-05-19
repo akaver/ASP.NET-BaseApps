@@ -13,6 +13,7 @@ using DAL.Helpers;
 using DAL.Interfaces;
 using Domain;
 using Domain.Identity;
+using Interfaces;
 using Ninject;
 using NLog;
 

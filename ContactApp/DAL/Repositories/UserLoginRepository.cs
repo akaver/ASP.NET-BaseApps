@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using DAL.Interfaces;
 using Domain.Identity;
+using Interfaces.Repositories;
 
 namespace DAL.Repositories
 {

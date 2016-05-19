@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL.Interfaces;
 using Domain;
+using Interfaces.Repositories;
 
 namespace DAL.Repositories
 {

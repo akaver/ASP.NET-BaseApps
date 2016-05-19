@@ -349,6 +349,10 @@
       <Project>{5B0755B3-5CF6-4CFB-B328-E152C98E6E22}</Project>
       <Name>Identity</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
+      <Project>{E80E1D6A-8585-4222-9964-715D978FE9EC}</Project>
+      <Name>Interfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

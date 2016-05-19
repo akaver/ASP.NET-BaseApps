@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Web.Http;
 using DAL.Interfaces;
+using Interfaces.UOW;
 
 namespace WebApi.Server.Controllers.Api
 {
