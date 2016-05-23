@@ -2435,6 +2435,10 @@
       <Project>{7308994f-36c4-49c2-8421-215aff278799}</Project>
       <Name>Resources</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WebApi.DAL\WebApi.DAL.csproj">
+      <Project>{97F822BC-34F0-4E2A-8BD0-A1EE6C35169C}</Project>
+      <Name>WebApi.DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
