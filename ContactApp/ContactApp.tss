@@ -2,7 +2,58 @@
 <ArrayOfArrayOfArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ArrayOfArrayOfString>
     <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\WebApi.DAL\WebApiUOW.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Interfaces\UOW\IUOW.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Interfaces\Repositories\IContactTypeRepository.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Interfaces\Repositories\IArticleRepository.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Interfaces\Repositories\IMultiLangStringRepository.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Interfaces\Repositories\ITranslationRepository.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\DAL\Repositories\TranslationRepsoitory.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\DAL\Repositories\MultiLangStringRepository.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\DAL\Repositories\ContactTypeRepository.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\DAL\Helpers\EFRepositoryFactories.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\DAL\UOW.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\WebApi.DAL\Repositories\WebApiRepository.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
       <string>NuGet - Solution</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\DAL\Repositories\ArticleRepository.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\DAL\Repositories\EFRepository.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\WebApi.DAL\Repositories\ArticleRepository.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\WebApi.Server\Helpers\UserNameFactory.cs</string>
+    </ArrayOfString>
+    <ArrayOfString>
+      <string>C:\!dev\git\ASP.NET-BaseApps\ContactApp\Web\Web.config</string>
     </ArrayOfString>
   </ArrayOfArrayOfString>
 </ArrayOfArrayOfArrayOfString>

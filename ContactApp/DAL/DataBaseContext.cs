@@ -6,7 +6,6 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Data.Entity.Validation;
 using System.Diagnostics;
 using System.Linq;
-using System.Web;
 using DataAnnotations;
 using DAL.EFConfiguration;
 using DAL.Helpers;
@@ -132,6 +131,7 @@ namespace DAL
                 {
                     ((IBaseEntity)entity.Entity).CreatedAtDT = DateTime.Now;
                     ((IBaseEntity)entity.Entity).CreatedBy = _userNameResolver.CurrentUserName;
+
                 }
 
                 ((IBaseEntity)entity.Entity).ModifiedAtDT = DateTime.Now;
